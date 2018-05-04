@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+				{% include 'includes/parts/phase-banner.html' %}
+
+			<form method="post" action='relationship-status'>
+				<div class="grid-row">
+					<div class="column-two-thirds">
+						<h1 class="heading-xlarge">Marital status</h1>
+
+						<div class="form-group">
+							<fieldset>
+								<div class="form-group form-group-compound">
+									<div class="multiple-choice">
+										<input id="radio-1" type="radio" name="relationship" value="Never been married">
+										<label for="radio-1">Never been married or in a civil partnership</label>
+									</div>
+
+									<div class="multiple-choice">
+										<input id="radio-2" type="radio" name="relationship" value="Married">
+										<label for="radio-2">Married</label>
+									</div>
+
+									<div class="multiple-choice">
+										<input id="radio-6" type="radio" name="relationship" value="Civil">
+										<label for="radio-6">In a civil partnership</label>
+									</div>
+
+									<div class="multiple-choice">
+										<input id="radio-3" type="radio" name="relationship" value="Widowed">
+										<label for="radio-3">Widowed</label>
+									</div>
+
+									<div class="multiple-choice">
+										<input id="radio-4" type="radio" name="relationship" value="Divorced">
+										<label for="radio-4">Divorced</label>
+									</div>
+
+									<div class="multiple-choice">
+										<input id="radio-5" type="radio" name="relationship" value="Dissolved">
+										<label for="radio-5">Dissolved civil partnership</label>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="form-group">
+							<input type="submit" class="button" value="Continue">
+						</div>
+					</div>
+
+					<div class="column-one-third">
+	          {% include 'includes/parts/helpni.html' %}
+	        </div>
+				</div>
+			</form>
+		</main><!-- / #page-container -->
+	{% endblock %}

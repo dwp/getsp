@@ -1,0 +1,122 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">Feedback</h1>
+					<p>Give us feedback to help us improve this service. It will take no more than 2 minutes.</p>
+					<h3 class="heading-medium">How easy was it to use Get your State Pension?</h3>
+					<form>
+						 <fieldset>
+							 <legend class="visuallyhidden">How easy was it to use Get your State Pension?</legend>
+							 <label class="block-label" for="easy-1">
+								 <input id="easy-1" type="radio" name="radio-group" value="Very easy">
+								 Very easy
+							 </label>
+							 <label class="block-label" for="easy-2">
+								 <input id="easy-2" type="radio" name="radio-group" value="Easy">
+								 Easy
+							 </label>
+							 <label class="block-label" for="easy-3">
+								 <input id="easy-3" type="radio" name="radio-group" value="Difficult">
+								 Difficult
+							 </label>
+							 <label class="block-label" for="easy-4">
+								 <input id="easy-4" type="radio" name="radio-group" value="Very difficult">
+								 Very difficult
+							 </label>
+						 </fieldset>
+					</form>
+
+					<h3 class="heading-medium">When you used this service, did you:</h3>
+					<form>
+						 <fieldset>
+							 <legend class="visuallyhidden">When you used this service, did you:</legend>
+							 <label class="block-label" for="did-1">
+								 <input id="did-1" type="radio" name="radio-group" value="Use it by yourself">
+								 Use it by yourself
+							 </label>
+							 <label class="block-label" for="did-2">
+								 <input id="did-2" type="radio" name="radio-group" value="Use it with someone">
+								 Use it with someone
+							 </label>
+							 <label class="block-label" for="did-3">
+								 <input id="did-3" type="radio" name="radio-group" value="Have someone use it for you">
+								 Have someone use it for you
+							 </label>
+						 </fieldset>
+					</form>
+
+					<h3 class="heading-medium">Overall, how did you feel about the service you received today?</h3>
+					<form>
+						 <fieldset>
+							 <legend class="visuallyhidden">Overall, how did you feel about the service you received today?</legend>
+							 <label class="block-label" for="feel-1">
+								 <input id="feel-1" type="radio" name="radio-group" value="Very satisfied">
+								 Very satisfied
+							 </label>
+							 <label class="block-label" for="feel-2">
+								 <input id="feel-2" type="radio" name="radio-group" value="Satisfied">
+								 Satisfied
+							 </label>
+							 <label class="block-label" for="feel-3">
+								 <input id="feel-3" type="radio" name="radio-group" value="Neither satisfied or dissatisfied">
+								 Neither satisfied or dissatisfied
+							 </label>
+							 <label class="block-label" for="feel-4">
+								 <input id="feel-4" type="radio" name="radio-group" value="Dissatisfied">
+								 Dissatisfied
+							 </label>
+							 <label class="block-label" for="feel-5">
+								 <input id="feel-5" type="radio" name="radio-group" value="Very dissatisfied">
+								 Very dissatisfied
+							 </label>
+						 </fieldset>
+					</form>
+
+					<h3 class="heading-medium">How could we improve this service?</h3>
+					<div class="form-group">
+            <label class="form-label visuallyhidden" for="textarea-a">
+              How could we improve this service?
+            </label>
+            <textarea class="form-control-full" id="textarea-a" cols="20" rows="10"></textarea>
+						<p>(Limit is 1200 characters)</p>
+						<p>Please do not incude any personal or financial information, e.g. your National Insurance number or bank details.</p>
+          </div>
+
+					<h3 class="heading-medium">Do you want to help us improve this service?</h3>
+					<div class="form-group">
+						<label class="form-label visuallyhidden" for="full-name-f1">
+							How could we improve this service?
+						</label>
+						<label class="form-label" for="full-name-f1">Full name</label>
+						<input class="form-control" id="full-name-f1" type="text">
+						<br/>
+						<br/>
+						<label class="form-label" for="telephone-number">Telephone number</label>
+						<input class="form-control" id="telephone-number" type="numerical">
+						<br/>
+						<br/>
+						<label class="form-label" for="email-address">Email address</label>
+						<input class="form-control" id="email-address" type="text">
+					</div>
+
+
+					<a href="#" class="button" value="Submit">Send feedback</a>
+					<br/>
+				</div>
+				<div class="column-one-third">
+
+        </div>
+			</div>
+	</main><!-- / #page-container -->
+	{% endblock %}
+

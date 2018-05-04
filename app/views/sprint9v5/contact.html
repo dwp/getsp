@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">Your contact details</h1>
+
+						<form method="post">
+
+							<div class="form-group">
+
+								<div>
+									<p> We’ll only contact you if we need further information. This is to<br>
+									make sure you get all the State Pension you’re entitled to.</p>
+								</div>
+
+				</div>
+						<div class="form-group">
+
+							<fieldset>
+
+								<h4 class="heading-small">How should we contact you?</h4>
+
+				      	<legend class="visually-hidden">How should we contact you?</legend>
+
+				      	<div class="multiple-choice" data-target="contact-by-homephone">
+				        	<input id="homephone" type="checkbox" name="radio-phone" value="Yes">
+				        	<label for="example-contact-by-homephone">Home phone</label>
+				      	</div>
+
+								<div class="panel panel-border-narrow js-hidden" id="contact-by-homephone">
+				        	<input class="form-control" name="contact-by-homephone" type="text" id="contact-by-homephone">
+
+				      	</div>
+
+				      	<div class="multiple-choice" data-target="contact-by-mobilephone">
+				        	<input id="mobilephone" type="checkbox" name="radio-phone" value="No">
+				        	<label for="example-contact-by-mobilephone">Mobile phone</label>
+				      	</div>
+
+								<div class="panel panel-border-narrow js-hidden" id="contact-by-mobilephone">
+									<input class="form-control" name="contact-mobilephone" type="text" id="contact-mobilephone">
+				      	</div>
+
+				      	<div class="multiple-choice" data-target="contact-by-workphone">
+				        	<input id="workphone" type="checkbox" name="radio-phone" value="No">
+									<label for="workphone">Work phone</label>
+				      	</div>
+
+								<div class="panel panel-border-narrow js-hidden" id="contact-by-workphone">
+				        	<input class="form-control" name="radio-workphone" type="text" id="contact-workphone">
+				      	</div>
+
+
+							</div>
+
+								<div class="form-group">
+				  				<label class="form-label-bold" for="email-address">Email address</label>
+				  				<input class="form-control" id="email-address" name="email-address" type="text">
+								</div>
+
+				    </fieldset>
+
+						<div class="form-group">
+							<button type="submit" class="button"> Continue </button>
+						</div>
+
+	  </form>
+
+				</div>
+
+				<div class="column-one-third">
+          {% include 'includes/parts/help.html' %}
+        </div>
+			</div>
+		</main><!-- / #page-container -->
+	{% endblock %}

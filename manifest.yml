@@ -1,0 +1,4 @@
+---
+applications:
+- name: govuk-gsyp-prototype
+  memory: 128M

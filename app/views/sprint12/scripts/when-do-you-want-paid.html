@@ -1,0 +1,90 @@
+<script>
+  $(document).ready(function() {
+    var marker = 0;
+
+    $(document).on('keyup', 'input', function() {
+      if ( $('#set-day').val().length >= 1 && $('#set-month').val().length >= 1 && $('#set-year').val().length === 4 ) {
+        marker++;
+      }
+
+      if ( marker != 0 ) {
+        var date = get_dates();
+        var spa_input = new Date( $('#set-year').val() + '-' + $('#set-month').val() + '-' + $('#set-day').val() )
+        var spa_date = new Date( $('#spa-date').val() );
+
+        if ( date.input_date > date.four_months ) {
+          $('#error-message').css('display', 'block');
+          $('#error-message2').css('display', 'none');
+          $('#error-message span').html(date.valid_date);
+          $('#error-message').parent().addClass('error');
+        } else if ( spa_input < spa_date ) {
+          $('#error-message').css('display', 'none');
+          $('#error-message2').css('display', 'block');
+          $('#error-message2').parent().addClass('error');
+        } else {
+          $('#error-message').css('display', 'none');
+          $('#error-message2').css('display', 'none');
+          $('#error-message').parent().removeClass('error');
+        }
+      }
+    });
+
+    $(document).on('click', 'label', function() {
+      if ( marker != 0 ) {
+        var date = get_dates();
+
+        if ( $(this).find('input').attr('id') === 'select-asap') {
+          $('#error-message').css('display', 'none');
+        } else if ( $(this).find('input').attr('id') === 'select-set') {
+          if ( date.input_date > date.four_months ) {
+            $('#error-message').css('display', 'block');
+            $('#error-message').parent().addClass('error');
+            $('#error-message span').html(date.valid_date);
+          }
+        } else {
+          $('#error-message').css('display', 'none');
+          $('#error-message2').css('display', 'none');
+          $('#error-message').parent().removeClass('error');
+        }
+      }
+    });
+  });
+
+
+  function get_nth_suffix(day) {
+    switch (day) {
+      case 1:
+      case 21:
+      case 31:
+        return 'st';
+      case 2:
+      case 22:
+        return 'nd';
+      case 3:
+      case 23:
+        return 'rd';
+      default:
+        return 'th';
+    }
+  }
+
+  function get_dates() {
+    var input_date  = new Date( $('#set-year').val() + '-' + $('#set-month').val() + '-' + $('#set-day').val() ),
+        today_date  = new Date(),
+        four_months = new Date( new Date(today_date).setMonth(today_date.getMonth() + 4 ) ),
+        valid_date  = new Date( new Date(input_date).setMonth(input_date.getMonth() - 4)),
+        monthNames  = [
+          "January", "February", "March",
+          "April", "May", "June", "July",
+          "August", "September", "October",
+          "November", "December"
+        ],
+        day     = valid_date.getDate(),
+        month   = valid_date.getMonth(),
+        year    = valid_date.getFullYear(),
+        suffix  = get_nth_suffix(day);
+        valid_date = day + suffix + ' ' + monthNames[month] + ' ' + year;
+
+    return {'input_date': input_date, 'today_date': today_date, 'four_months': four_months, 'valid_date': valid_date}
+  }
+</script>

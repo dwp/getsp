@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">Your State Pension age</h1>
+					<p>You will reach State Pension age on <span class="bold-small">1 March 2018</span>.</p>
+
+</br>
+
+					<p class="text form-label-bold" for="address-select">
+						Do you want to get your State Pension as soon as possible </br>
+						after this date?
+					</p>
+
+	<form method="post">
+					<fieldset class="inline">
+						<div class="form-group">
+							<div class="multiple-choice">
+								<input id="date-yes" type="radio" name="date-select" value="date-yes">
+								<label for="date-yes">Yes</label>
+							</div>
+
+							<div class="multiple-choice">
+								<input id="date-no" type="radio" name="date-select" value="date-no">
+								<label for="date-no">No</label>
+							</div>
+						</div>
+					</fieldset>
+
+
+					<div class="form-group">
+						<button class="button" value="Continue">Continue</button> <br>
+					</div>
+
+			</form>
+
+				</div>
+				<div class="column-one-third">
+          {% include 'includes/parts/help.html' %}
+        </div>
+			</div>
+	</main><!-- / #page-container -->
+	{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<div class="confirmation-message">
+						<span style="font-size: 42px; font-weight: bold;">Application complete</span><br/>
+						<span style="font-size: 22px;">{{completeDate}}</span><br/>
+						<span style="font-size: 22px;">Your reference number is</span><br/>
+						<span style="font-size: 28px; font-weight: bold;">HDJ2123F</span>
+					</div>
+
+					<h3 class="heading-medium">What happens next</h3>
+					<p>You'll get a letter in the next 14 days confirming when your pension will start and how much you'll get.</p>
+
+					<h3 class="heading-medium">If your circumstances change</h3>
+					<p>
+						You must report the following changes straight away:
+
+						<ul class="list list-bullet">
+							<li>change of address (including going into hospital, a care home or permanently leaving the UK)</li>
+							<li>bank details</li>
+							<li>death of a spouse or civil partner</li>
+							<li>separation from a spouse or civil partner</li>
+						</ul>
+					</p>
+					<p><span class="heading-small">Telephone:</span> 0345 606 0265</p>
+					<br/>
+
+					<p><img src="/public/images/icon-file-download.png" style="position: relative; float: left; margin-top: -5px;">&nbsp; <a href="download" target="_new" class="heading-medium">Save this page</a></p>
+					<p><img src="/public/images/icon-print.png" width="30" style="float: left; margin-top: -5px;">&nbsp; <a href="#" onclick="window.print();" class="heading-medium">Print this page</a></p>
+
+					<a href="#" value="Submit">What did you think of this service?</a><br/>
+				</div>
+			</div>
+		</main><!-- / #page-container -->
+		{% endblock %}
+

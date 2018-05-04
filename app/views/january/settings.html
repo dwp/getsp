@@ -1,0 +1,136 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %} SPA - Prototype {% endblock %} {% block content %} <main id="content" role="main" class="group">
+	<div class="phase-banner">
+		<p>
+			<strong class="phase-tag">ALPHA</strong>
+			<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+		</p>
+	</div>
+
+	<h1 class="heading-large">Settings</h1>
+	<!-- feel free to change this page to suit your needs -->
+
+	{{#error}}
+		<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+			<h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+				Oops
+			</h1>
+
+			<p>
+				{{error}}
+			</p>
+		</div>
+	{{/error}}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<form action="/january/settings" method="POST">
+				<h1 class="heading-medium">
+			    NINO input version
+			  </h1>
+
+				<fieldset class="inline">
+					<div class="form-group">
+			      <label class="block-label" for="nino_version_1">
+			        <input id="nino_version_1" type="radio" name="nino_version" value="1">
+							<span class="heading-small">Version 1</span><br />
+							The input fields for the NINO inputs sit side by side.
+			      </label>
+
+			      <label class="block-label" for="nino_version_2">
+			        <input id="nino_version_2" type="radio" name="nino_version" value="2">
+							<span class="heading-small">Version 2</span><br />
+							The input fields for the NINO inputs sit one above the other.
+			      </label>
+					</div>
+		    </fieldset>
+
+				<h1 class="heading-medium">
+			    NINO example highlight
+			  </h1>
+
+				<fieldset class="inline">
+					<div class="form-group">
+			      <label class="block-label" for="nino_highlight_1">
+			        <input id="nino_highlight_1" type="radio" name="nino_highlight" value="1">
+							<span class="heading-small">Grey Border</span><br />
+							Numbers to input are the same colour as the help text, but sport a narrow border.
+			      </label>
+
+			      <label class="block-label" for="nino_highlight_2">
+			        <input id="nino_highlight_2" type="radio" name="nino_highlight" value="2">
+							<span class="heading-small">Black Background</span><br />
+							Numbers to input are depicted in white with a black background.
+			      </label>
+					</div>
+		    </fieldset>
+
+				<h1 class="heading-medium">
+			    Sort Code Input
+			  </h1>
+
+				<fieldset class="inline">
+					<div class="form-group">
+			      <label class="block-label" for="bank_version_1">
+			        <input id="bank_version_1" type="radio" name="bank_version" value="1">
+							<span class="heading-small">3 fields</span><br />
+							The input for the sort code is split into 3 individual fields.
+			      </label>
+
+			      <label class="block-label" for="bank_version_2">
+			        <input id="bank_version_2" type="radio" name="bank_version" value="2">
+							<span class="heading-small">1 field</span><br />
+							The input for the sort code is one shorter field, and is formatted using javascript.
+			      </label>
+					</div>
+		    </fieldset>
+
+				<h1 class="heading-medium">
+			    Error bank details
+			  </h1>
+
+				<fieldset class="inline">
+					<div class="form-group">
+						<label class="block-label" for="err_none">
+			        <input id="err_none" type="radio" name="fail_feature" value="err_none">
+							<span class="heading-small">None</span><br />
+							This will not add any errors and the form will work as normal.
+			      </label>
+
+			      <label class="block-label" for="err_mismatch_name">
+			        <input id="err_mismatch_name" type="radio" name="fail_feature" value="err_mismatch_name">
+							<span class="heading-small">Mismatch on name</span><br />
+							This will modify the name input once so they do not match.
+			      </label>
+
+						<label class="block-label" for="err_account_no">
+			        <input id="err_account_no" type="radio" name="fail_feature" value="err_account_no">
+							<span class="heading-small">Incorrect format on account number</span><br />
+							This will delete the last digit from the account number once, rendering it invalid.
+			      </label>
+
+						<label class="block-label" for="err_sort">
+			        <input id="err_sort" type="radio" name="fail_feature" value="err_sort">
+							<span class="heading-small">Incorrect format on sort code</span><br />
+							This will delete the last digit from the sort code, rendering it invalid.
+			      </label>
+
+						<label class="block-label" for="err_service">
+			        <input id="err_service" type="radio" name="fail_feature" value="err_service">
+							<span class="heading-small">Service breaker</span><br />
+							This not let the user through for 3 turns, sending them to an alternative exit page.
+			      </label>
+					</div>
+		    </fieldset>
+
+				<div class="form-group">
+					<input type="submit" class="button" value="Update settings">
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+{% endblock %}
+
+

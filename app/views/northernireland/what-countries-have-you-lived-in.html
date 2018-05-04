@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+  {% block pageTitle %}
+  	State Pension Activation
+  {% endblock %}
+
+  {% block content %}
+  <main id="content" role="main">
+    {% include 'includes/parts/phase-banner.html' %}
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+
+          <h1 class="heading-xlarge">What countries have you lived in?</h1>
+
+          <form id="countries" action="what-countries-have-you-lived-in" method="post">
+            <fieldset id="country-type-ahead">
+              <div class="form-group">
+                <label class="form-label" for="country-name-1">Country name <span class="remove-link"></span></label>
+                <input class="form-control country-name" id="country-name-1" type="text" name="country-name-1" autocomplete="off">
+
+                <div class="country-list" style="display:none;">
+                </div>
+              </div>
+            </fieldset>
+
+            <p>
+              <a id="add-another-country" href="#">Add another country</a>
+            </p>
+
+            <input type="submit" class="button" value="Continue">
+          </form>
+        </div>
+
+        <div class="column-one-third">
+          {% include 'includes/parts/helpni.html' %}
+        </div>
+      </div>
+    </main>
+  {% endblock %}
+
+  {% block pageScripts %}
+      {% include 'sprint9/scripts/countries.html' %}
+  {% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	Authenticate your details
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- #page-container -->
+<main id="content" role="main" class="group">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-large">Confirm your details.</h1>
+            <p class="text">In order to accurately calculate your State Pension Entitlement we'd like to confirm some details with you.</p>
+            <br/>
+            <!-- Unique ID -->
+            <div class="form-group">
+                <label class="form-label" for="ni-number">
+                    Your Surname
+                </label>
+                <input class="form-control" id="ni-number" type="text">        
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="ni-number">
+                    Your Postcode
+                </label>
+                <input class="form-control" id="ni-number" type="text">        
+            </div>
+
+
+
+            <div class="form-group">
+                <!-- <input type="submit" class="button" value="Submit"> -->
+                <a href="question1" class="button" value="Submit">Continue</a>
+            </div>
+
+                <!-- </form> -->
+
+
+        </div>  
+    </div>
+
+
+    </main><!-- / #page-container -->
+
+{% endblock %}
+
+

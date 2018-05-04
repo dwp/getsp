@@ -1,0 +1,121 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			<div class="phase-banner">
+				<p>
+					<strong class="phase-tag">ALPHA</strong>
+					<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+				</p>
+			</div>
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					{% if errors %}
+						<div class="error-summary error-message no-margin-top" data-banktype="{{errors.bank_type}}">
+							<h2 class="heading-medium error-summary-heading">{{errors.title}}</h2>
+							<p>{{errors.text}}</p>
+						</div>
+					{% endif %}
+
+					<h1 class="heading-xlarge">Your payment details</h1>
+					<p class="text">You can only have your pension paid into your own bank or building society account.</p>
+
+					<p class="text">Give details of the bank account or building society account for your pension to be paid into.</p>
+
+					<br />
+
+					<form action="/january/bank-details" method="POST">
+						<fieldset class="form-group">
+							<legend class="form-label-bold" for="address">How would you like to get paid?</legend>
+
+							<label class="block-label" for="building_1" data-target="bank-details">
+								<input id="building_1" type="radio" name="building" value="bank">
+								Bank account
+							</label>
+
+							<label class="block-label" for="building_2" data-target="building-soc-details">
+								<input id="building_2" type="radio" name="building" value="building">
+								Building society account
+							</label>
+						</fieldset>
+
+						<div class="js-hidden" id="bank-details">
+							<div class="form-group">
+								<label class="form-label-bold label-no-hint" for="ba-account-holder">Your name</label>
+								<input type="text" class="form-control" id="ba-account-holder" name="ba-account-holder" value="{{data.ba-account-holder}}">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label-bold" for="ba-account-number">
+									Your account number
+								</label>
+								<input type="text" class="form-control" id="ba-account-number" name="ba-account-number" value="{{data.ba-account-number}}" maxlength="8">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label-bold" for="ba-sort-code">
+									Your sort code
+								</label>
+								<input type="text" class="form-control" id="ba-sort-code" name="ba-sort-code" value="{{data.ba-sort-code}}" maxlength="12">
+							</div>
+
+							<div class="form-group">
+								<button type="submit" class="button">Confirm details</button>
+							</div>
+						</div>
+
+						<div class="js-hidden" id="building-soc-details">
+							<div class="form-group">
+								<label class="form-label-bold label-no-hint" for="bs-account-holder">Your name</label>
+								<input type="text" class="form-control" id="bs-account-holder" name="bs-account-holder" value="{{data.bs-account-holder}}">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label-bold" for="bs-account-number">
+									Your account number
+								</label>
+								<input type="text" class="form-control" id="bs-account-number" name="bs-account-number" value="{{data.bs-account-number}}" maxlength="8">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label-bold" for="bs-sort-code">
+									Your sort code
+								</label>
+								<input type="text" class="form-control" id="bs-sort-code" name="bs-sort-code" value="{{data.bs-sort-code}}" maxlength="12">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label-bold" for="bs-society-roll">
+									Your building society roll or reference number
+									<span class="form-hint">If your building society uses a roll or reference number, you will find it on your passbook</span>
+								</label>
+								<input type="text" class="form-control" id="bs-society-roll" name="bs-society-roll" value="{{data.bs-society-roll}}">
+							</div>
+
+							<div class="form-group">
+								<button type="submit" class="button">Confirm details</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div class="column-third" style="padding-top: 120px;">
+					<h3 class="heading-small">Safe and secure</h3>
+					<p>We use secure transmission to protect your personal information.</p>
+					<p><img src="/public/images/ssl-cert.jpg" width="100"/></p>
+				</div>
+			</div>
+		</main>
+	{% endblock %}
+
+	{% block pageScripts %}
+			{% include 'includes/scripts/bankFormatter.html' %}
+	{% endblock %}
+

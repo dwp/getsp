@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">Your claim date</h1>
+
+					<p>To make a claim now, you must choose a date which is within </br>
+						the next 4 months.
+
+</br>
+</br>
+					If you don’t want your State Pension within the next 4 months, </br>
+					come back when you’re ready.</p>
+
+				<p><a href="pension-age">I want to get my State Pension sooner</a> </p>
+
+				</div>
+				<div class="column-one-third">
+          {% include 'includes/parts/help.html' %}
+        </div>
+			</div>
+	</main><!-- / #page-container -->
+	{% endblock %}

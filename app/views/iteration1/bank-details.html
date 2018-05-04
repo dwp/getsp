@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+
+<!-- #page-container -->
+<main id="content" role="main" class="group">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+  	
+	<div class="column-two-thirds group">
+    	<h1 class="heading-large">Payment Details</h1>
+		<p class="text">In order to start paying your State Pension we need to know where you would like it paid into, this can be a Bank or Building Society Account.</p>
+		<br/>
+		<div class="form-group">
+	        <label class="form-label" for="full_name">Name of Account Holder</label>
+	        <input type="text" class="form-control" id="full_name">
+        </div>
+        
+        <div class="form-group">
+	        <label class="form-label" for="full_name">
+		        Sort Code
+		        <span class="form-hint">e.g. 00-00-00</span>
+	        </label>
+	        <input type="text" class="form-control" id="full_name">
+        </div>
+        
+        <div class="form-group">
+	        <label class="form-label" for="full_name">
+		        Account Number
+		        <span class="form-hint">8 digit number on your bank card</span>
+	        </label>
+	        <input type="text" class="form-control" id="full_name">
+        </div>
+		
+		<p class="text">Clicking the button below will activate your pension and will paid into the account numbers provided above.</p>
+		<div class="form-group">
+        	<!-- <input type="submit" class="button" value="Submit"> -->
+            <a href="confirmation" class="button" value="Submit">Start paying my pension</a>
+        </div>
+	</div>      
+</main>
+
+{% endblock %}
+
+

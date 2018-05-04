@@ -1,0 +1,106 @@
+<div class="grid-row">
+    <div class="column-two-thirds">
+    <h1 class="heading-xlarge">Payment details</h1>
+  <p class="text">Give details of the bank account or building society account for your pension to be paid into.</p>
+  <br />
+
+
+<form>
+
+      <fieldset class="form-group">
+
+        <legend class="form-label-bold" for="address">How would you like to get paid?</legend>
+
+
+          <label class="block-label" for="radio-inline-1" data-target="bank-details">
+          <input id="radio-inline-1" type="radio" name="building" value="bank">
+          Bank account
+        </label>
+
+          <label class="block-label" for="radio-inline-2" data-target="building-soc-details">
+            <input id="radio-inline-2" type="radio" name="building" value="building">
+          Building society account
+          </label>
+        </fieldset>
+
+<div class="js-hidden" id="bank-details">
+  <div class="form-group">
+        <label class="form-label-bold label-no-hint" for="account-holder">Name of account holder</label>
+        <input type="text" class="form-control" id="account-holder">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="sort-code">
+          Sort code
+          <span class="form-hint">for example, 00 00 00</span>
+        </label>
+        <input type="text" class="form-control" id="sort-code">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="account-number">
+          Account number
+          <span class="form-hint">8 digit number on your bank card</span>
+        </label>
+        <input type="text" class="form-control" id="account-number">
+      </div>
+
+  <!--<div class="form-group">
+        <label class="form-label-bold" for="society-roll">
+          Building society roll or reference number
+          <span class="form-hint">If your building society uses a roll or reference number, you will find it on your passbook</span>
+        </label>
+        <input type="text" class="form-control" id="society-roll">
+      </div>-->
+
+  <div class="form-group">
+        <!-- <input type="submit" class="button" value="Submit"> -->
+          <a href="contact" class="button" value="Submit">Confirm details</a>
+      </div>
+  </div>
+
+
+  <div class="js-hidden" id="building-soc-details">
+    <div class="form-group">
+          <label class="form-label-bold label-no-hint" for="account-holder">Name of account holder</label>
+          <input type="text" class="form-control" id="account-holder">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="sort-code">
+            Sort code
+            <span class="form-hint">for example, 00 00 00</span>
+          </label>
+          <input type="text" class="form-control" id="sort-code">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="account-number">
+            Account number
+            <span class="form-hint">8 digit number on your bank card</span>
+          </label>
+          <input type="text" class="form-control" id="account-number">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="society-roll">
+            Building society roll or reference number
+            <span class="form-hint">If your building society uses a roll or reference number, you will find it on your passbook</span>
+          </label>
+          <input type="text" class="form-control" id="society-roll">
+        </div>
+
+        <div class="form-group">
+          <!-- <input type="submit" class="button" value="Submit"> -->
+            <a href="contact" class="button" value="Submit">Confirm details</a>
+        </div>
+      </div>
+</form>
+    </div>
+
+      <div class="column-third" style="padding-top: 120px;">
+          <h3 class="heading-small">Safe and secure</h3>
+          <p>We use secure transmission to protect your personal information.</p>
+          <p><img src="/public/images/ssl-cert.jpg" width="100"/></p>
+        </div>
+</div>

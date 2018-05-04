@@ -1,0 +1,67 @@
+<script>
+  $('#ba-sort-code, #bs-sort-code').on('keyup', function(e) {
+    formatter(e, $(this));
+  });
+
+  $('#ba-sort-code, #bs-sort-code').on('paste', function(e) {
+    var looping = true;
+    var el_id = $(this);
+    if(looping === true) {
+      setTimeout(function () {
+        paster(e, el_id);
+        looping = false;
+      }, 100);
+    }
+  });
+
+  var selected = 0;
+
+  if ( $('.error-summary').length > 0 && selected === 0 ) {
+    if( $('.error-summary:first').attr('data-banktype') == 'bank' ) {
+      $('#building_1').trigger('click');
+      $('#bank-details').attr('aria-hidden', 'false');
+      $('#bank-details').css('display', 'block');
+      selected = 1;
+    } else if( $('.error-summary:first').attr('data-banktype') == 'building' ) {
+      $('#building_2').trigger('click');
+      $('#building-soc-details').attr('aria-hidden', 'false');
+      $('#building-soc-details').css('display', 'block');
+      selected = 1;
+    }
+  }
+
+  function paster(e, element) {
+    var string = element.val();
+        string = string.replace(/ |-|\./g,'');
+    var p1 = string.slice(0,2),
+        p2 = string.slice(2,4),
+        p3 = string.slice(4,6),
+        formatted = p1 + ' - ' + p2 + ' - ' + p3;
+    count = formatted.length;
+
+    element.val(formatted);
+  }
+
+  function formatter(e, element) {
+    var string = '';
+    string += element.val();
+    count = string.length;
+
+    if(e.keyCode == 8 || e.keyCode == 46) {
+      if (count !== 0) {
+        if (count == 5 || count == 10) {
+          string = string.slice(0, -3);
+          count --;
+        }
+      }
+    } else {
+      if(count == 2 || count == 7) {
+        string = string += ' - ';
+      }
+    }
+
+    count = string.length;
+
+    element.val(string);
+  }
+</script>

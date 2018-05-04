@@ -1,0 +1,309 @@
+<script>
+   var countries = [
+      { "value": "Afghanistan", "tokens": "Afghanistan" },
+      { "value": "Albania", "tokens": "Albania" },
+      { "value": "Algeria", "tokens": "Algeria" },
+      { "value": "American Samoa", "tokens": "American Samoa" },
+      { "value": "Andorra", "tokens": "Andorra" },
+      { "value": "Angola", "tokens": "Angola" },
+      { "value": "Anguilla", "tokens": "Anguilla" },
+      { "value": "Antigua and Barbuda", "tokens": "Antigua and Barbuda" },
+      { "value": "Argentina", "tokens": "Argentina, Argentine Nation, Argentine Confederation, United Provinces of the Rio de la Plata" },
+      { "value": "Armenia", "tokens": "Armenia, Hayastan" },
+      { "value": "Aruba", "tokens": "Aruba" },
+      { "value": "Australia", "tokens": "Commonwealth of Australia" },
+      { "value": "Austria", "tokens": "Austria" },
+      { "value": "Azerbaijan", "tokens": "Azerbaijan" },
+      { "value": "Bahamas", "tokens": "Bahamas" },
+      { "value": "Bahrain", "tokens": "Bahrain" },
+      { "value": "Bangladesh", "tokens": "Bangladesh, Bengal" },
+      { "value": "Barbados", "tokens": "Barbados" },
+      { "value": "Belarus", "tokens": "Belarus, Byelorussia" },
+      { "value": "Belgium", "tokens": "Belgium" },
+      { "value": "Belize", "tokens": "Belize, British Honduras" },
+      { "value": "Benin", "tokens": "Benin, Dahomey" },
+      { "value": "Bermuda", "tokens": "Bermuda" },
+      { "value": "Bhutan", "tokens": "Bhutan" },
+      { "value": "Bolivia", "tokens": "Bolivia" },
+      { "value": "Bonaire/St Eustatius/Saba", "tokens": "Bonaire/St Eustatius/Saba" },
+      { "value": "Bosnia and Herzegovina", "tokens": "Bosnia and Herzegovina" },
+      { "value": "Botswana", "tokens": "Botswana, Bechuanaland" },
+      { "value": "Brazil", "tokens": "Brazil, Brasil" },
+      { "value": "British Indian Ocean Territory", "tokens": "British Indian Ocean Territory" },
+      { "value": "British Virgin Islands", "tokens": "British Virgin Islands" },
+      { "value": "Brunei", "tokens": "Brunei" },
+      { "value": "Bulgaria", "tokens": "Bulgaria" },
+      { "value": "Burkina Faso", "tokens": "Burkina Faso, Upper Volta" },
+      { "value": "Burma", "tokens": "Burma" },
+      { "value": "Burundi", "tokens": "Burundi" },
+      { "value": "Cambodia", "tokens": "Cambodia, Khmer Republic, Democratic Kampuchea" },
+      { "value": "Cameroon", "tokens": "Cameroon" },
+      { "value": "Canada", "tokens": "Canada" },
+      { "value": "Cape Verde", "tokens": "Cape Verde" },
+      { "value": "Cayman Islands", "tokens": "Cayman Islands" },
+      { "value": "Central African Republic", "tokens": "Central African Republic" },
+      { "value": "Chad", "tokens": "Chad" },
+      { "value": "Chile", "tokens": "Chile" },
+      { "value": "China", "tokens": "China" },
+      { "value": "Colombia", "tokens": "Colombia" },
+      { "value": "Comoros", "tokens": "Comoros" },
+      { "value": "Congo", "tokens": "Congo" },
+      { "value": "Costa Rica", "tokens": "Costa Rica" },
+      { "value": "Cote d’Ivoire", "tokens": "Cote d’Ivoire" },
+      { "value": "Croatia", "tokens": "Croatia, Hrvatska" },
+      { "value": "Cuba", "tokens": "Cuba" },
+      { "value": "Curaçao", "tokens": "Curaçao" },
+      { "value": "Cyprus", "tokens": "Cyprus" },
+      { "value": "Czech Republic", "tokens": "Czech Republic" },
+      { "value": "Democratic Republic of Congo", "tokens": "Democratic Republic of Congo, Zaire" },
+      { "value": "Denmark", "tokens": "Denmark" },
+      { "value": "Djibouti", "tokens": "Djibouti" },
+      { "value": "Dominica", "tokens": "Dominica" },
+      { "value": "Dominican Republic", "tokens": "Dominican Republic" },
+      { "value": "Ecuador", "tokens": "Ecuador" },
+      { "value": "Egypt", "tokens": "Egypt" },
+      { "value": "El Salvador", "tokens": "El Salvador" },
+      { "value": "Equatorial Guinea", "tokens": "Equatorial Guinea" },
+      { "value": "Eritrea", "tokens": "Eritrea" },
+      { "value": "Estonia", "tokens": "Estonia" },
+      { "value": "Ethiopia", "tokens": "Ethiopia, Abyssinia" },
+      { "value": "Falkland Islands", "tokens": "Falkland Islands" },
+      { "value": "Fiji", "tokens": "Fiji" },
+      { "value": "Finland", "tokens": "Finland" },
+      { "value": "France", "tokens": "France" },
+      { "value": "French Guiana", "tokens": "French Guiana" },
+      { "value": "French Polynesia", "tokens": "French Polynesia" },
+      { "value": "Gabon", "tokens": "Gabon" },
+      { "value": "Gambia", "tokens": "Gambia" },
+      { "value": "Georgia", "tokens": "Georgia" },
+      { "value": "Germany", "tokens": "Germany" },
+      { "value": "Ghana", "tokens": "Ghana, Gold Coast" },
+      { "value": "Gibraltar", "tokens": "Gibraltar" },
+      { "value": "Greece", "tokens": "Greece, Hellas" },
+      { "value": "Grenada", "tokens": "Grenada" },
+      { "value": "Guadeloupe", "tokens": "Guadeloupe" },
+      { "value": "Guatemala", "tokens": "Guatemala" },
+      { "value": "Guernsey", "tokens": "Guernsey" },
+      { "value": "Guinea", "tokens": "Guinea" },
+      { "value": "Guinea-Bissau", "tokens": "Guinea-Bissau" },
+      { "value": "Guyana", "tokens": "Guyana" },
+      { "value": "Haiti", "tokens": "Haiti" },
+      { "value": "Holy See", "tokens": "Holy See" },
+      { "value": "Honduras", "tokens": "Honduras" },
+      { "value": "Hong Kong", "tokens": "Hong Kong" },
+      { "value": "Hungary", "tokens": "Hungary" },
+      { "value": "Iceland", "tokens": "Iceland" },
+      { "value": "India", "tokens": "India" },
+      { "value": "Indonesia", "tokens": "Indonesia" },
+      { "value": "Iran", "tokens": "Iran" },
+      { "value": "Iraq", "tokens": "Iraq, Mesopotamia" },
+      { "value": "Ireland", "tokens": "Ireland" },
+      { "value": "Isle of Man", "tokens": "Isle of Man" },
+      { "value": "Israel", "tokens": "Israel" },
+      { "value": "Italy", "tokens": "Italy" },
+      { "value": "Jamaica", "tokens": "Jamaica" },
+      { "value": "Japan", "tokens": "Japan" },
+      { "value": "Jersey", "tokens": "Jersey" },
+      { "value": "Jordan", "tokens": "Jordan" },
+      { "value": "Kazakhstan", "tokens": "Kazakhstan" },
+      { "value": "Kenya", "tokens": "Kenya" },
+      { "value": "Kiribati", "tokens": "Kiribati" },
+      { "value": "Kosovo", "tokens": "Kosovo" },
+      { "value": "Kuwait", "tokens": "Kuwait" },
+      { "value": "Kyrgyzstan", "tokens": "Kyrgyzstan" },
+      { "value": "Laos", "tokens": "Laos" },
+      { "value": "Latvia", "tokens": "Latvia" },
+      { "value": "Lebanon", "tokens": "Lebanon" },
+      { "value": "Lesotho", "tokens": "Lesotho, Basutoland" },
+      { "value": "Liberia", "tokens": "Liberia" },
+      { "value": "Libya", "tokens": "Libya" },
+      { "value": "Liechtenstein", "tokens": "Liechtenstein" },
+      { "value": "Lithuania", "tokens": "Lithuania" },
+      { "value": "Luxembourg", "tokens": "Luxembourg" },
+      { "value": "Macao", "tokens": "Macao" },
+      { "value": "Macedonia", "tokens": "Macedonia" },
+      { "value": "Madagascar", "tokens": "Madagascar" },
+      { "value": "Malawi", "tokens": "Malawi, Nyasaland" },
+      { "value": "Malaysia", "tokens": "Malaysia, Sabah and Sarawak" },
+      { "value": "Maldives", "tokens": "Maldives" },
+      { "value": "Mali", "tokens": "Mali" },
+      { "value": "Malta", "tokens": "Malta" },
+      { "value": "Marshall Islands", "tokens": "Marshall Islands" },
+      { "value": "Martinique", "tokens": "Martinique" },
+      { "value": "Mauritania", "tokens": "Mauritania" },
+      { "value": "Mauritius", "tokens": "Mauritius" },
+      { "value": "Mayotte", "tokens": "Mayotte" },
+      { "value": "Mexico", "tokens": "Mexico" },
+      { "value": "Micronesia", "tokens": "Micronesia" },
+      { "value": "Moldova", "tokens": "Moldova" },
+      { "value": "Monaco", "tokens": "Monaco" },
+      { "value": "Mongolia", "tokens": "Mongolia" },
+      { "value": "Montenegro", "tokens": "Montenegro" },
+      { "value": "Montserrat", "tokens": "Montserrat" },
+      { "value": "Morocco", "tokens": "Morocco" },
+      { "value": "Mozambique", "tokens": "Mozambique" },
+      { "value": "Namibia", "tokens": "Namibia" },
+      { "value": "Nauru", "tokens": "Nauru" },
+      { "value": "Nepal", "tokens": "Nepal" },
+      { "value": "Netherlands", "tokens": "Netherlands, the Netherlands, Holland" },
+      { "value": "New Caledonia", "tokens": "New Caledonia" },
+      { "value": "New Zealand", "tokens": "New Zealand" },
+      { "value": "Nicaragua", "tokens": "Nicaragua" },
+      { "value": "Niger", "tokens": "Niger" },
+      { "value": "Nigeria", "tokens": "Nigeria" },
+      { "value": "North Korea", "tokens": "North Korea" },
+      { "value": "Norway", "tokens": "Norway" },
+      { "value": "Oman", "tokens": "Oman" },
+      { "value": "Pakistan", "tokens": "Pakistan" },
+      { "value": "Palau", "tokens": "Palau" },
+      { "value": "Panama", "tokens": "Panama" },
+      { "value": "Papua New Guinea", "tokens": "Papua New Guinea" },
+      { "value": "Paraguay", "tokens": "Paraguay" },
+      { "value": "Peru", "tokens": "Peru" },
+      { "value": "Philippines", "tokens": "Philippines" },
+      { "value": "Pitcairn Island", "tokens": "Pitcairn Island" },
+      { "value": "Poland", "tokens": "Poland" },
+      { "value": "Portugal", "tokens": "Portugal" },
+      { "value": "Qatar", "tokens": "Qatar" },
+      { "value": "Réunion", "tokens": "Réunion" },
+      { "value": "Romania", "tokens": "Romania" },
+      { "value": "Russia", "tokens": "Russia, USSR" },
+      { "value": "Rwanda", "tokens": "Rwanda" },
+      { "value": "Samoa", "tokens": "Samoa" },
+      { "value": "San Marino", "tokens": "San Marino" },
+      { "value": "São Tomé and Principe", "tokens": "São Tomé and Principe" },
+      { "value": "Saudi Arabia", "tokens": "Saudi Arabia" },
+      { "value": "Senegal", "tokens": "Senegal" },
+      { "value": "Serbia", "tokens": "Serbia" },
+      { "value": "Seychelles", "tokens": "Seychelles" },
+      { "value": "Sierra Leone", "tokens": "Sierra Leone" },
+      { "value": "Singapore", "tokens": "Singapore" },
+      { "value": "Slovakia", "tokens": "Slovakia" },
+      { "value": "Slovenia", "tokens": "Slovenia" },
+      { "value": "Solomon Islands", "tokens": "Solomon Islands" },
+      { "value": "Somalia", "tokens": "Somalia" },
+      { "value": "South Africa", "tokens": "South Africa" },
+      { "value": "South Georgia and the South Sandwich Islands", "tokens": "South Georgia and the South Sandwich Islands" },
+      { "value": "South Korea", "tokens": "South Korea" },
+      { "value": "South Sudan", "tokens": "South Sudan" },
+      { "value": "Spain", "tokens": "Spain" },
+      { "value": "Sri Lanka", "tokens": "Sri Lanka, Ceylon" },
+      { "value": "St Helena, Ascension and Tristan da Cunha", "tokens": "St Helena, Ascension and Tristan da Cunha" },
+      { "value": "St Kitts and Nevis", "tokens": "St Kitts and Nevis" },
+      { "value": "St Lucia", "tokens": "St Lucia" },
+      { "value": "St Maarten", "tokens": "St Maarten" },
+      { "value": "St Pierre & Miquelon", "tokens": "St Pierre & Miquelon" },
+      { "value": "St Vincent and The Grenadines", "tokens": "St Vincent and The Grenadines" },
+      { "value": "Sudan", "tokens": "Sudan" },
+      { "value": "Suriname", "tokens": "Suriname, Dutch Guiana" },
+      { "value": "Swaziland", "tokens": "Swaziland" },
+      { "value": "Sweden", "tokens": "Sweden" },
+      { "value": "Switzerland", "tokens": "Switzerland" },
+      { "value": "Syria", "tokens": "Syria" },
+      { "value": "Taiwan", "tokens": "Taiwan, Formosa" },
+      { "value": "Tajikistan", "tokens": "Tajikistan" },
+      { "value": "Tanzania", "tokens": "Tanzania" },
+      { "value": "Thailand", "tokens": "Thailand" },
+      { "value": "The Occupied Palestinian Territories", "tokens": "The Occupied Palestinian Territories" },
+      { "value": "Timor Leste", "tokens": "Timor Leste" },
+      { "value": "Togo", "tokens": "Togo" },
+      { "value": "Tonga", "tokens": "Tonga" },
+      { "value": "Trinidad and Tobago", "tokens": "Trinidad and Tobago" },
+      { "value": "Tunisia", "tokens": "Tunisia" },
+      { "value": "Turkey", "tokens": "Turkey, Ottoman Empire" },
+      { "value": "Turkmenistan", "tokens": "Turkmenistan" },
+      { "value": "Turks and Caicos Islands", "tokens": "Turks and Caicos Islands" },
+      { "value": "Tuvalu", "tokens": "Tuvalu" },
+      { "value": "Uganda", "tokens": "Uganda" },
+      { "value": "Ukraine", "tokens": "Ukraine" },
+      { "value": "United Arab Emirates", "tokens": "United Arab Emirates" },
+      { "value": "Uruguay", "tokens": "Uruguay" },
+      { "value": "United States of America", "tokens": "United States of America, USA, U.S.A" },
+      { "value": "Uzbekistan", "tokens": "Uzbekistan" },
+      { "value": "Vanuatu", "tokens": "Vanuatu" },
+      { "value": "Venezuela", "tokens": "Venezuela" },
+      { "value": "Vietnam", "tokens": "Vietnam" },
+      { "value": "Wallis and Futuna", "tokens": "Wallis and Futuna" },
+      { "value": "Western Sahara", "tokens": "Western Sahara" },
+      { "value": "Yemen", "tokens": "Yemen" },
+      { "value": "Zambia", "tokens": "Zambia, Rhodesia" },
+      { "value": "Zimbabwe", "tokens": "Zimbabwe, Rhodesia" }
+    ];
+
+  $(document).on('click', 'a', function(e) {
+    if ( /(remove-link-)([0-9])/.test($(this).attr('id')) ) {
+      e.preventDefault();
+      $(this).parent().parent().parent().remove();
+      remove_links();
+      $(this).blur();
+    }
+  });
+
+  $('#country-list').delegate('span', 'click', function() {
+    $('#country-type-ahead input').last().val($(this).html());
+    $('#country-list').css('display', 'none');
+  });
+
+  $('#country-type-ahead').delegate('input[type="text"]', 'keyup', function() {
+    $('#country-list').html('');
+    $('#country-list').css({'top': $(this).offset().top + $(this).outerHeight(), 'left': $(this).offset().left, 'display': 'block'});
+
+    if ( /(country-name-)([0-9])/.test($(this).attr('id'))  ) {
+      var counter = 0;
+
+      for ( var i = 0; i < countries.length; i++ ) {
+        var countryList = countries[i].tokens.toLowerCase(),
+            input = $(this).val().toLowerCase();
+
+        if ( countryList.indexOf(input) > -1 ) {
+          $('#country-list').css('border', '1px solid #ccc')
+          counter ++;
+          if ( counter <= 5 ) {
+            $('#country-list').append('<span id="country-link-' + counter + '" class="country-link">' + countries[i].value + '</span>');
+          }
+        }
+      }
+    }
+
+    // Clear html when nothing in input
+    if ( $(this).val().length === 0 ) {
+      $('#country-list').html('');
+      $('#country-list').css('display', 'none');
+    }
+
+    // Clear border when no match
+    if ( $('#country-list').html() === '' ) {
+      $('#country-list').css('display', 'none');
+    }
+  });
+
+  $('#add-another-country').on('click', function(e) {
+    e.preventDefault();
+    var last_input = $('#country-type-ahead input').last().attr('id'),
+        num = last_input.substr(last_input.length - 1);
+        num = parseInt(num) + 1;
+
+    $('#country-list').before('<div class="form-group">' +
+                      '<label class="form-label" for="country-name-' + num + '">Country name <span></span></label>' +
+                      '<input class="form-control" id="country-name-' + num + '" name="country-name-' + num + '"type="text" autocomplete="off">' +
+                    '</div>');
+
+    remove_links();
+
+    $(this).blur();
+  })
+
+  function remove_links() {
+    var last_input = $('#country-type-ahead input').last().attr('id'),
+        num = last_input.substr(last_input.length - 1);
+        num = parseInt(num) + 1;
+
+    $('.form-label').each(function() {
+      if ( num > 2 ) {
+        $(this).find('span').html('<a id="remove-link-' + num + '" href="' + Math.random() + '">Remove</a>');
+      } else {
+        $(this).find('span').html('');
+      }
+    });
+  }
+  </script>

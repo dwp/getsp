@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main">
+	{% include 'includes/parts/phase-banner.html' %}
+
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<h1 class="heading-xlarge">
+				Your personal data
+			</h1>
+
+			<p>
+				The only data GOV.UK Verify will share with the Department for </br>
+				Work and Pensions is:
+			</br>
+			<ul class="list-bullet">
+				<li>your name</li>
+				<li>your date of birth</li>
+				<li>your address</li>
+			</ul>
+		</p>
+
+		<form action="outdec" method="post">
+			<div class="form-group">
+				<fieldset class="inline">
+
+					<legend>
+						<h2 class="heading-medium">
+							Can we use this information when you claim your </br>
+							State Pension?
+						</h2>
+					</legend>
+
+					<div class="multiple-choice">
+						<input id="outdec-yes" type="radio" name="out-dec" value="Yes">
+						<label for="outdec-yes">Yes</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="outdec-no" type="radio" name="out-dec" value="No">
+						<label for="outdec-no">No</label>
+					</div>
+				</fieldset>
+			</div>
+
+			<input type="submit" class="button" value="Continue">
+		</form>
+	</div>
+</div>
+
+</div>
+</main>
+{% endblock %}
+
+
+{% block pageScripts %}
+{% include 'includes/scripts/ninoFocus.html' %}
+{% include 'includes/scripts/dobFocus.html' %}
+{% include 'sprint9/scripts/clear_fields.html' %}
+{% endblock %}

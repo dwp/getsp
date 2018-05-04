@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="group">
+    {% include 'includes/parts/phase-banner.html' %}
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-xlarge">
+        GOV.UK Verify won't work for you
+      </h1>
+
+      <p>This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
+
+      <p>This paragraph has a link to <a href="/url/of/onward/page">find out more about this subject</a>.</p>
+
+    </div>
+
+        <div class="column-one-third">
+      {% include 'includes/parts/help.html' %}
+        </div>
+
+  </div>
+</main>
+
+{% endblock %}

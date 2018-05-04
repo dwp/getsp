@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+State Pension Activation
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" class="group">
+  {% include 'includes/parts/phase-banner.html' %}
+
+  <div class="column-two-thirds">
+
+    <h1 class="heading-large">
+      Check your answers before sending your application
+    </h1>
+
+    <table class="check-your-answers">
+
+
+      <tbody>
+        <tr>
+          <td>
+            What's the most number of balls you can juggle?
+          </td>
+          <td>
+            {{ data['juggling-ability'] }}
+          </td>
+          <td class="change-answer">
+            <a href="/juggling-ability">
+              Change <span class="visuallyhidden">
+                the most number of balls you can juggle?</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+
+            <td>
+              Most impressive juggling feat
+            </td>
+            <td>
+              {{ data['juggling-feat']}}
+            </td>
+            <td class="change-answer">
+              <a href="/juggling-feat">
+                Change <span class="visuallyhidden">Most impressive juggling feat</span>
+              </a>
+            </td>
+
+            <tr>
+              <td>
+                Juggling history
+              </td>
+              <td>
+                {{ data['juggling-history']}}
+              </td>
+              <td class="change-answer">
+                <a href="/juggling-history">
+                  Change <span class="visuallyhidden">juggling history</span>
+                </a>
+              </td>
+
+              <tr>
+                <td>
+                  How much do you enjoy juggling?
+                </td>
+                <td>
+                  {{ data['juggling-enjoyment'] }}
+                </td>
+                <td class="change-answer">
+                  <a href="/juggling-enjoyment">
+                    Change <span class="visuallyhidden">
+                      How much do you enjoy juggling?</span>
+                    </a>
+                  </td>
+                </tr>
+
+              </tr>
+
+            </tbody>
+          </table>
+
+</br>
+
+        </div>
+        <div class="form-group">
+          <a href="/confirmation-page" class="button">Accept and send application</a>
+        </div>
+
+      </main>
+      {% endblock %}

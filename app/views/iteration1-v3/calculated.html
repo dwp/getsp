@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main" class="group">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+  	<form>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+    	<h1 class="heading-large">Your State Pension Entitlement</h1>
+		<p class="text">Thanks for those details, based on the information we hold and you provided we have calculated your state pension entitlement.</p>
+		
+		<div class="highlighted-event" style="padding: 40px; background-color: #28a197; color: #fff; text-align: center;">
+            <div style="font-size: 24px; font-weight: bold; clear:both;">Your Pension Entitlement</div>
+            <div style="font-size: 56px; font-weight: bold; clear: both;">£143.20</div>
+	        <div style="font-size: 24px; font-weight: bold; clear:both;">per week</div>
+        </div>
+		
+		<br/>
+		
+		<fieldset>
+			<legend>
+				<span class="form-label">
+			        You can be paid your State Pension weekly or monthly, which would you prefer?
+			    </span>
+			</legend>
+			
+			<br/>
+			
+			<div class="form-group form-group-compound">
+			    <label class="block-label" data-target="example-ni-no" for="radio-indent-1">
+				    <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
+				    Weekly - £143.20 per week
+			    </label>
+				
+				<label class="block-label" for="radio-indent-2">
+				    <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
+				    Fortnightly - £286.40 per fortnight
+			    </label>
+				
+				<label class="block-label" for="radio-indent-3">
+				    <input id="radio-indent-3" type="radio" name="radio-indent-group" value="No">
+				    Monthly - £572.80 per month
+			    </label>
+			</div>
+		</fieldset>  
+        
+        <br/>
+        
+        <div class="form-group">
+        	<!-- <input type="submit" class="button" value="Submit"> -->
+            <a href="bank-details" class="button" value="Submit">Continue</a>
+        </div>
+
+            <!-- </form> -->
+        </div>
+
+    </div>      
+    </form>
+
+    </main><!-- / #page-container -->
+
+{% endblock %}
+
+

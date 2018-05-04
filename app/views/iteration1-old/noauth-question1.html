@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+    	<h1 class="heading-xlarge">Confirm your details</h1>
+		<div class="form-group">
+	        <label class="form-label-bold label-no-hint" for="surname">
+				Your Surname
+			</label>
+			<input class="form-control" id="surname" type="text">        
+		</div>
+		
+		<div class="form-group">
+	        <label class="form-label-bold label-no-hint" for="post-code">
+				Your Postcode
+			</label>
+			<input class="form-control" id="post-code" type="text">        
+		</div>
+		
+		
+		
+        <div class="form-group">
+        	<!-- <input type="submit" class="button" value="Submit"> -->
+            <a href="question1" class="button" value="Submit">Continue</a>
+        </div>
+
+            <!-- </form> -->
+
+        </div>
+    </div>      
+
+
+    </main><!-- / #page-container -->
+
+{% endblock %}
+
+

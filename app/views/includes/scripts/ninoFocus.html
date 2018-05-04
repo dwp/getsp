@@ -1,0 +1,18 @@
+<script>
+  $('#value1').on('keyup', function(e) {
+    if ( !/37|38|39|40/.test(e.keyCode) ) {
+      if ( $(this).val().length === 1 ) {
+        $('#value2').focus();
+        var tmpval = $('#value2').val();
+        $('#value2').val('');
+        $('#value2').val(tmpval);
+      }
+    }
+  });
+
+  $('#value2').on('keyup', function(e) {
+    if ( /8|46/.test(e.keyCode) ) {
+      $('#value1').focus();
+    }
+  })
+</script>

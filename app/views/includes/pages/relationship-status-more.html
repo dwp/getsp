@@ -1,0 +1,162 @@
+<legend class="heading-medium">Name</legend>
+
+
+               <div class="form-group">
+                 <label class="form-label" for="full-name">First name</label>
+                 <input type="text" class="form-control" id="full-name">
+               </div>
+               <div class="form-group">
+                 <label class="form-label" for="full-name">Surname</label>
+                 <input type="text" class="form-control" id="full-name">
+               </div>
+
+               <div class="form-group">
+                 <label class="form-label" for="full-name">All other names they have been known by</label>
+                 <p class="form-hint">Include maiden name, former married names and changes of family name.</p>
+                   <textarea name="other" rows="5" class="form-control form-control-3-4"></textarea>
+               </div>
+
+               <!-- <fieldset class="inline">
+               <legend class="form-label-bold" for="address">Do you know their National Insurance number?</legend>
+
+
+               <div class="form-group">
+                 <label class="block-label"  for="ni-yes" data-target="ni-details">
+                   <input id="ni-yes" type="radio" name="ni" value="Yes">
+                   Yes
+                 </label>
+                 <label class="block-label" for="ni-no">
+                   <input id="ni-no" type="radio" name="ni" value="No">
+                   No
+                 </label>
+               </div>
+             </fieldset> -->
+
+           <div class="form-group js-hidden panel-indent" id="ni-details">
+             <label class="form-label-bold" for="ni-yes">
+               National Insurance number
+               <span class="form-hint">
+                 It's on your National Insurance card, benefit letter, payslip or P60.
+                 <br>
+                 For example, 'VO 12 34 56 D'.
+               </span>
+             </label>
+             <input type="text" class="form-control" id="ni-number">
+           </div>
+
+       <div class="form-group">
+         <fieldset>
+           <legend class="form-label-bold">Date of birth</legend>
+
+           <div class="form-date">
+
+             <p class="form-hint">For example, 31 3 1980</p>
+
+             <div class="form-group form-group-day">
+               <label for="dob-day">Day</label>
+               <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+             </div>
+
+             <div class="form-group form-group-month">
+               <label for="dob-month">Month</label>
+               <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+             </div>
+
+             <div class="form-group form-group-year">
+               <label for="dob-year">Year</label>
+               <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+             </div>
+           </div>
+
+         </fieldset>
+       </div>
+
+
+<!--
+           <fieldset class="inline">
+
+     <legend class="form-label-bold" for="address">Do/Did they live at the same address?</legend>
+
+
+     <div class="form-group">
+       <label class="block-label"  for="address-yes">
+         <input id="address-yes" type="radio" name="address" value="Yes">
+         Yes
+       </label>
+       <label class="block-label" for="address-no" data-target="details">
+         <input id="address-no" type="radio" name="address" value="No">
+         No
+       </label>
+     </div>
+   </fieldset>
+
+<div class="js-hidden panel-indent" id="details">
+
+       <legend class="heading-medium">Address Details</legend>
+
+               <div class="form-group-compound">
+                 <label class="form-label" for="full-name">Building and Street</label>
+                 <input type="text" class="form-control" id="full-name">
+               </div>
+               <div class="form-group">
+                 <input type="text" class="form-control" id="full-name">
+               </div>
+               <div class="form-group">
+                 <label class="form-label" for="full-name">Town and City</label>
+                 <input type="text" class="form-control" id="full-name">
+               </div>
+               <div class="form-group">
+                 <label class="form-label" for="full-name">County</label>
+                 <input type="text" class="form-control" id="full-name">
+               </div>
+               <div class="form-group">
+                 <label class="form-label" for="full-name">Postcode</label>
+                 <input type="text" class="form-control form-control-1-4" id="full-name">
+               </div>
+</div>
+-->
+
+       {{#isMarried}}
+  <!--     <fieldset class="inline">
+     <legend class="form-label-bold" for="bank-details">
+                       Are you sending your marriage or civil partnership certificate with this form?
+               </legend>
+
+
+     <div class="form-group">
+       <label class="block-label"  for="marriage-yes">
+         <input id="marriage-yes" type="radio" name="marriage-details" value="Yes">
+         Yes
+       </label>
+       <label class="block-label" for="marriage-no">
+         <input id="marriage-no" type="radio" name="marriage-details" value="No">
+         No
+       </label>
+     </div>
+   </fieldset>-->
+       {{/isMarried}}
+
+       {{#isEnded}}
+           <!--<fieldset class="inline">
+
+     <legend class="form-label-bold" for="bank-details">
+                       Are you sending your decree absolute, decree of divorce, certificate of annulment or civil partnership dissolution with this form?
+               </legend>
+
+
+     <div class="form-group">
+       <label class="block-label"  for="decree-yes">
+         <input id="decree-yes" type="radio" name="decree-details" value="Yes">
+         Yes
+       </label>
+       <label class="block-label" for="decree-no">
+         <input id="decree-no" type="radio" name="decree-details" value="No">
+         No
+       </label>
+     </div>
+   </fieldset>-->
+       {{/isEnded}}
+
+       <div class="form-group">
+         <input type="submit" name="submit" class="button" value="Continue">
+       </div>

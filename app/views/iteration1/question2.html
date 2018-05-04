@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+    <form>
+	    <div class="grid-row">
+	        <div class="column-two-thirds">
+		    	<h1 class="heading-xlarge">Have you lived or worked outside of the United Kingdom and Isle of Man?</h1>
+				<!-- Unique ID -->
+				<fieldset class="inline">
+			    	<label class="block-label" for="radio-inline-1">
+						<input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+						Yes
+					</label>
+		    
+				    <label class="block-label" for="radio-inline-2">
+				    	<input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+						No
+				    </label>
+	  			</fieldset>   
+	  			<br/>
+				<div class="form-group">
+		            <a href="calculated" class="button" value="Submit">Continue</a>
+		        </div>
+			</div>
+    	</div>
+    </form>
+ </main><!-- / #page-container -->
+
+{% endblock %}
+
+

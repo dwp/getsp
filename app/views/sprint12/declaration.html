@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">Declaration</h1>
+					<p>By submitting this application, you agree:</p>
+
+					<ul class="list-bullet">
+						<li>the information you've given is complete and correct</li>
+						<li>to tell Department for Work and Pensions (DWP) straight away if your address, bank details, or marital status change</li>
+						<li>DWP can ask you to pay back any recoverable overpayment of State Pension</li>
+					</ul>
+
+
+					<div class="legal_message">
+				    You could be prosecuted or have to pay a penalty if you
+				    give wrong or incomplete information, or if you don't report
+						changes straight away.
+				  </div>
+					<a href="end" class="button" value="Submit">I agree - send application</a>
+					<br/>
+				</div>
+
+			</div>
+			</p>
+	</main><!-- / #page-container -->
+	{% endblock %}

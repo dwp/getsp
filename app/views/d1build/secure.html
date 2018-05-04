@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+
+		<!-- #page-container -->
+		<main id="content" role="main">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<form method="post" action="secure">
+				<div class="grid-row">
+					<div class="column-two-thirds">
+
+						<h1 class="heading-xlarge">Provide your invite code</h1>
+
+						<div class="form-group">
+							<fieldset>
+								<label class="form-label-bold" for="ni_number">
+									Invite code
+									<p class="form-hint">Can be found on your invitation to get your State Pension letter.</p>
+								</label>
+
+								<div class="form-group">
+									<input type="text" class="form-control" id="reference" name="reference" data-required="true"/><br/>
+								</div>
+							</fieldset>
+						</div>
+
+						<p class="text form-label-bold" for="address-select">
+							Is your residential address the address we sent your invite letter to?
+						</p>
+
+						<fieldset class="inline">
+				      <div class="form-group">
+				        <label class="block-label" for="address-yes">
+				          <input id="address-yes" type="radio" name="address-select" value="Yes">
+				          Yes
+				        </label>
+
+				        <label class="block-label" for="address-no">
+				          <input id="address-no" type="radio" name="address-select" value="No">
+				          No
+				        </label>
+				      </div>
+				    </fieldset>
+
+						<div class="form-group">
+							<button class="button" value="Continue">Continue</button> <br>
+						</div>
+					</div>
+				</div>
+			</form>
+		</main>
+	{% endblock %}
+
+	{% block pageScripts %}
+	{% endblock %}
+

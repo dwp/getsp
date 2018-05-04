@@ -1,0 +1,80 @@
+<script>
+  // Most DOB fields
+  dob_day_set( $('#dob-day'), $('#dob-month') );
+  dob_month_set( $('#dob-day'), $('#dob-month'), $('#dob-year') );
+  dob_year_set( $('#dob-month'), $('#dob-year') );
+
+  // If more than 1 on a page
+  dob_day_set( $('#dob-day1'), $('#dob-month1') );
+  dob_month_set( $('#dob-day1'), $('#dob-month1'), $('#dob-year1') );
+  dob_year_set( $('#dob-month1'), $('#dob-year1') );
+
+  // If more than 1 on a page
+  dob_day_set( $('#dob-day2'), $('#dob-month2') );
+  dob_month_set( $('#dob-day2'), $('#dob-month2'), $('#dob-year2') );
+  dob_year_set( $('#dob-month2'), $('#dob-year2') );
+
+  // If more than 2 on a page
+  dob_day_set( $('#dob-day3'), $('#dob-month3') );
+  dob_month_set( $('#dob-day3'), $('#dob-month3'), $('#dob-year3') );
+  dob_year_set( $('#dob-month3'), $('#dob-year3') );
+
+  // If more than 2 on a page
+  dob_day_set( $('#dob-day3'), $('#dob-month3') );
+  dob_month_set( $('#dob-day3'), $('#dob-month3'), $('#dob-year3') );
+  dob_year_set( $('#dob-month3'), $('#dob-year3') );
+
+  // If more than 2 on a page
+  dob_day_set( $('#dob-day4'), $('#dob-month4') );
+  dob_month_set( $('#dob-day4'), $('#dob-month4'), $('#dob-year4') );
+  dob_year_set( $('#dob-month4'), $('#dob-year4') );
+
+  // When do you want paid?
+  dob_day_set( $('#set-day'), $('#set-month') );
+  dob_month_set( $('#set-day'), $('#set-month'), $('#set-year') );
+  dob_year_set( $('#set-month'), $('#set-year') );
+
+  function dob_day_set(day, month) {
+    day.on('keyup', function(e) {
+      if ( !/37|38|39|40/.test(e.keyCode) ) {
+        if ( $(this).val().length === 2 ) {
+          month.focus();
+          var tmpmn = month.val();
+          month.val('');
+          month.val(tmpmn);
+        }
+      }
+    });
+  }
+
+  function dob_month_set( day, month, year ) {
+    month.on('keyup', function(e) {
+      if ( /8|46/.test(e.keyCode) ) {
+        if ( $(this).val().length === 0 ) {
+          day.focus();
+          var tmpdy = day.val();
+          day.val('');
+          day.val(tmpdy);
+        }
+      } else if ( $(this).val().length === 2 ) {
+        year.focus();
+        var tmpyr = year.val();
+        year.val('');
+        year.val(tmpyr);
+      }
+    });
+  }
+
+  function dob_year_set( month, year ) {
+    year.on('keyup', function(e) {
+      if ( /8|46/.test(e.keyCode) ) {
+        if ( $(this).val().length === 0 ) {
+          month.focus();
+          var tmpmn = $('#dob-day').val();
+          month.val('');
+          month.val(tmpmn);
+        }
+      }
+    });
+  }
+</script>

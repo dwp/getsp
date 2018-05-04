@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+			    <div class="column-two-thirds">
+						<br/>
+						<br/>
+				    <h1 class="heading-xlarge">Get your State Pension</h1>
+						<p>Only use this service if you want to  start being paid any State Pension you're entitled to as soon as possible</p>
+						<p>You'll need:</p>
+
+						<ul class="list-bullet">
+							<li>your invitation code (on your Get your State Pension letter)</li>
+							<li>the date you were married or became civil partners</li>
+							<li>the date you were divorced or your civil partnership was dissolved</li>
+							<li>dates of time you spent living or working abroad</li>
+							<li>your own bank or joint bank or building society details</li>
+						</ul>
+
+						<p>If you don't want to get your State Pension now, come back when you're ready.</p>
+						<p>There's a different service if <a href="https://www.nidirect.gov.uk/services/claim-your-state-pension-online">you're from Northern Ireland</a>.</p>
+
+				    <div class="form-group" class="get-started" id="get-started" style="margin-bottom: 70px;">
+				    	<a href="secure" class="button button-get-started" role="button">Start now</a>
+				    </div>
+
+				    <section>
+						<h2 class="heading-medium compound" id="helpcontent">Other ways to get your State Pension</h2>
+
+						<h3 class="heading-small">By phone</h3>
+						<p class="compound">Telephone: 0800 731 7898<br/>
+						Textphone: 0800 731 7339</p>
+
+						<p class="compound">Monday to Friday, 8am to 6pm</p>
+					</section>
+				</div>
+
+
+			</div>
+
+		</main><!-- / #page-container -->
+	{% endblock %}

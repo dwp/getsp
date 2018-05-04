@@ -1,0 +1,61 @@
+<script>
+  dob_day_set( $('#living-start-day'), $('#living-start-month') );
+  dob_month_set( $('#living-start-day'), $('#living-start-month'), $('#living-start-year') );
+  dob_year_set( $('#living-start-month'), $('#living-start-year') );
+
+  dob_day_set( $('#living-stop-day'), $('#living-stop-month') );
+  dob_month_set( $('#living-stop-day'), $('#living-stop-month'), $('#living-stop-year') );
+  dob_year_set( $('#living-stop-month'), $('#living-stop-year') );
+
+  dob_day_set( $('#working-start-day'), $('#working-start-month') );
+  dob_month_set( $('#working-start-day'), $('#working-start-month'), $('#working-start-year') );
+  dob_year_set( $('#working-start-month'), $('#working-start-year') );
+
+  dob_day_set( $('#working-stop-day'), $('#working-stop-month') );
+  dob_month_set( $('#working-stop-day'), $('#working-stop-month'), $('#working-stop-year') );
+  dob_year_set( $('#working-stop-month'), $('#working-stop-year') );
+
+  function dob_day_set(day, month) {
+    day.on('keyup', function(e) {
+      if ( !/37|38|39|40/.test(e.keyCode) ) {
+        if ( $(this).val().length === 2 ) {
+          month.focus();
+          var tmpmn = month.val();
+          month.val('');
+          month.val(tmpmn);
+        }
+      }
+    });
+  }
+
+  function dob_month_set( day, month, year ) {
+    month.on('keyup', function(e) {
+      if ( /8|46/.test(e.keyCode) ) {
+        if ( $(this).val().length === 0 ) {
+          day.focus();
+          var tmpdy = day.val();
+          day.val('');
+          day.val(tmpdy);
+        }
+      } else if ( $(this).val().length === 2 ) {
+        year.focus();
+        var tmpyr = year.val();
+        year.val('');
+        year.val(tmpyr);
+      }
+    });
+  }
+
+  function dob_year_set( month, year ) {
+    year.on('keyup', function(e) {
+      if ( /8|46/.test(e.keyCode) ) {
+        if ( $(this).val().length === 0 ) {
+          month.focus();
+          var tmpmn = $('#dob-day').val();
+          month.val('');
+          month.val(tmpmn);
+        }
+      }
+    });
+  }
+</script>

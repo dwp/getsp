@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main" class="group">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+    <form method="post" action="">
+
+      <div class="grid-row">
+          <div class="column-two-thirds">
+    <h1 class="heading-xlarge">{{ pageHeader }}</h1>
+
+      			{% include 'includes/pages/relationship-status-more.html' %}
+
+
+
+        </form>
+			</div>
+	</div>
+	  </main><!-- / #page-container -->
+
+{% endblock %}
+
+

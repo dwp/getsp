@@ -1,0 +1,132 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">
+						Check your details
+					</h1>
+					<main id="content" role="main">
+
+
+					  <table class="check-your-answers">
+
+					    <thead>
+					      <tr>
+					        <th colspan="2">
+					          <h2 class="heading-medium">
+					            Your details
+					          </h2>
+					        </th>
+					        <th>
+					        </th>
+					      </tr>
+					    </thead>
+
+					    <tbody>
+					      <tr>
+					        <td>
+					          Have you ever lived outside the UK?
+					        </td>
+					        <td>
+					          No
+					        </td>
+					        <td class="change-answer">
+					          <a href="#">
+					            Change <span class="visuallyhidden">Have you ever lived outside the UK?</span>
+					          </a>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td>
+					          Have you ever worked outside the UK?
+					        </td>
+					        <td>
+					          No
+					        </td>
+					        <td class="change-answer">
+					          <a href="#">
+					            Change <span class="visuallyhidden">Have you ever worked outside the UK?</span>
+					          </a>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td>
+					          What is your current marital status?
+					        </td>
+					        <td>
+					          Married
+					        </td>
+					        <td class="change-answer">
+					          <a href="#">
+					            Change <span class="visuallyhidden">What is your current marital status?</span>
+					          </a>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td>
+					          What date did you get married?
+					        </td>
+					        <td>
+					          12/01/2001
+					        </td>
+					        <td class="change-answer">
+					          <a href="#">
+					            Change <span class="visuallyhidden">What date did you get married?</span>
+					          </a>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td>
+					          About your spouse
+					        </td>
+					        <td>
+					          David Smith</br>
+										02/06/1954
+					        </td>
+					        <td class="change-answer">
+					          <a href="#">
+					            Change <span class="visuallyhidden">Spouse details</span>
+					          </a>
+					        </td>
+					      </tr>
+					      <tr>
+					        <td>
+					          Contact details
+					        </td>
+					        <td>
+					          Home telephone</br>
+										01665728398</br>
+										Email</br>
+										helloyou@gmail.com
+					        </td>
+					        <td class="change-answer">
+					          <a href="#">
+					            Change <span class="visuallyhidden">Contact details</span>
+					          </a>
+					        </td>
+					      </tr>
+					    </tbody>
+					  </table>
+</br>
+
+					  <div class="form-group">
+					    <a href="confirmation-page" class="button">Accept and send application</a>
+					  </div>
+
+					</main>
+				</div>
+				<div class="column-one-third">
+          {% include 'includes/parts/help.html' %}
+        </div>
+			</div>
+	</main><!-- / #page-container -->
+	{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main" class="group">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+
+
+  	<!-- Col - This should go to wrong-marriage-year if the year is not set as 1973 in the routes file, if it is set to 1973 then it should go through to Question 2 -->
+
+  	<form action="marriage-year" method="get">
+
+    <div class="grid-row">
+	    <div class="column-two-thirds">
+		    <h1 class="heading-xlarge">What date were you married?</h1>
+
+
+				<div class="form-group form-date">
+						<p class="form-hint">For example, 31 12 1980</p>
+						<div class="form-group form-group-day">
+								<label for="dob-day">Day</label>
+								<input class="form-control" id="dob-day" maxlength="2" name="dob-day" value="{{dob-day}}" type="text" />
+						</div>
+						<div class="form-group form-group-month">
+								<label for="dob-month">Month</label>
+								<input class="form-control" id="dob-month" maxlength="2"  name="dob-month" value="{{dob-month}}" type="text" />
+						</div>
+						<div class="form-group form-group-year">
+								<label for="dob-year">Year</label>
+								<input class="form-control" id="marriage_year" maxlength="4" name="marriage_year" value="{{dob-year}}" type="text" />
+						</div>
+				</div>
+
+				    <div class="form-group">
+								 <input type="submit" class="button" value="Continue">
+			        </div>
+				</form>
+        </div>
+
+    </div>
+
+         </div>
+</main><!-- / #page-container -->
+
+{% endblock %}
+
+

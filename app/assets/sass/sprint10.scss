@@ -1,0 +1,22 @@
+// Import GOV.UK elements, this will import the frontend toolkit and some base styles.
+// Take a look at elements.scss to see which files are imported.
+@import "_colours";
+
+.country-link {
+  display: block;
+  padding: 8px;
+  font-weight: bold;
+
+  &:hover {
+    background: #0097cf;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.country-list {
+  border: 3px solid $focus-colour;
+  margin-top: -3px;
+}
+
+.left { border-right: 3px solid #bfc1c3; }

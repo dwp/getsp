@@ -1,0 +1,141 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					{% if errors %}
+						<div class="error-summary error-message no-margin-top" data-banktype="{{errors.bank_type}}">
+							<h2 class="heading-medium error-summary-heading">{{errors.title}}</h2>
+							<p>{{errors.text}}</p>
+						</div>
+					{% endif %}
+
+					<h1 class="heading-xlarge">Your account details</h1>
+					<p class="text">You can only have your pension paid into your personal or joint bank or building society account.</p>
+
+					<br />
+
+					<form action="bank-details" method="POST">
+
+						<div class="form-group" id="bank-details">
+							<div class="form-group">
+								<fieldset>
+									<label class="form-label-bold label-no-hint" for="ba-account-holder">Account name</label>
+									<input type="text" class="form-control" id="ba-account-holder" name="ba-account-holder" value="{{data.ba-account-holder}}">
+
+								</fieldset>
+							</div>
+
+							  <legend class="form-label-bold">Sort code</legend>
+
+						    <div class="form-date form-group">
+									<fieldset>
+							      <div class="form-group form-group-day">
+							        <label for="ba-sort1"></label>
+							        <input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="{{data.ba-sort1}}" type="text" />
+							      </div>
+
+							      <div class="form-group form-group-month">
+							        <label for="ba-sort2"></label>
+							        <input class="form-control" id="ba-sort2" maxlength="2"  name="ba-sort2" value="{{data.ba-sort1}}" type="text" />
+							      </div>
+
+										<div class="form-group form-group-month">
+							        <label for="ba-sort3"></label>
+							        <input class="form-control" id="ba-sort3" maxlength="2"  name="ba-sort3" value="{{data.ba-sort3}}" type="text" />
+							      </div>
+									</fieldset>
+						    </div>
+
+								<div class="form-group">
+									<fieldset>
+										<label class="form-label-bold" for="ba-account-number">
+											Account number
+										</label>
+										<input type="text" class="form-control" id="ba-account-number" name="ba-account-number" value="{{data.ba-account-number}}" maxlength="8">
+									</fieldset>
+								</div>
+
+							<div class="form-group">
+								<button type="submit" class="button">Confirm details</button>
+							</div>
+						</div>
+
+						<div class="js-hidden" id="building-soc-details">
+							<div class="form-group">
+								<fieldset>
+									<label class="form-label-bold label-no-hint" for="bs-account-holder">Account name</label>
+									<input type="text" class="form-control" id="bs-account-holder" name="bs-account-holder" value="{{data.bs-account-holder}}">
+								</fieldset>
+							</div>
+
+							<fieldset>
+						    <legend class="form-label-bold">Sort code</legend>
+
+						    <div class="form-date form-group">
+						      <div class="form-group form-group-day">
+						        <label for="bs-sort1"></label>
+						        <input class="form-control" id="bs-sort1" maxlength="2" name="bs-sort1" value="{{data.bs-sort1}}" type="text" />
+						      </div>
+
+						      <div class="form-group form-group-month">
+						        <label for="bs-sort2"></label>
+						        <input class="form-control" id="bs-sort2" maxlength="2"  name="bs-sort2" value="{{data.bs-sort2}}" type="text" />
+						      </div>
+
+									<div class="form-group form-group-month">
+						        <label for="bs-sort3"></label>
+						        <input class="form-control" id="bs-sort3" maxlength="2"  name="bs-sort3" value="{{data.bs-sort3}}" type="text" />
+						      </div>
+						    </div>
+						  </fieldset>
+
+							<div class="form-group">
+								<fieldset>
+									<label class="form-label-bold" for="bs-account-number">Account number</label>
+									<input type="text" class="form-control" id="bs-account-number" name="bs-account-number" value="{{data.bs-account-number}}" maxlength="8">
+								</fieldset>
+							</div>
+
+							<div class="form-group">
+								<fieldset>
+									<label class="form-label-bold" for="bs-society-roll">
+										Building society roll or reference number
+										<span class="form-hint">If your building society uses a roll or reference number, you will</br> find it on your passbook</span>
+									</label>
+									<input type="text" class="form-control" id="bs-society-roll" name="bs-society-roll" value="{{data.bs-society-roll}}">
+								</fieldset>
+							</div>
+
+							<div class="form-group">
+								<button type="overview.html" class="button">Confirm details</button>
+							</div>
+
+						</div>
+						<br/>
+						<br/>
+					</form>
+				</div>
+
+				<div class="column-one-third">
+					{% include 'includes/parts/bank-side.html' %}
+				</div>
+
+
+			</div>
+		</main>
+	{% endblock %}
+
+	{% block pageScripts %}
+		{% include 'includes/scripts/bankFocus.html' %}
+		{% include 'sprint5/scripts/clear_fields.html' %}
+	{% endblock %}

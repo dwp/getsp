@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="group">
+  {% include 'includes/parts/phase-banner.html' %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-xlarge">
+        Some of your details have not been recognised
+      </h1>
+
+      <p>You have successfully verified your identity with a certified company,
+        but Department for Work and Pensions are unable to match your details.
+        You do not need to verify with another certified company.</p>
+
+      <p>To get your State Pension you need to call us to confirm some personal details.
+    </p>
+
+    <h2 class="heading-small">
+    By phone
+    </h2>
+
+    Telephone: 0800 731 7898</br>
+    Textphone: 0800 731 7339</br>
+    Monday to Friday, 8am to 6pm</br>
+
+    </br>
+    You will need your National Insurance number.
+
+
+  </div>
+
+
+</div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">Your date of birth</h1>
+					<div class="form-group">
+			     <fieldset>
+			       <legend>
+			         <span class="form-label-bold visuallyhidden">
+			           Your date of birth
+			         </span>
+			         <span class="form-hint" id="dob-hint">For example, 31 3 1980</span>
+			       </legend>
+			       <div class="form-date">
+			         <div class="form-group form-group-day">
+			           <label class="form-label" for="dob-day">Day</label>
+			           <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+			         </div>
+			         <div class="form-group form-group-month">
+			           <label class="form-label" for="dob-month">Month</label>
+			           <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+			         </div>
+			         <div class="form-group form-group-year">
+			           <label class="form-label" for="dob-year">Year</label>
+			           <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+			         </div>
+			       </div>
+			     </fieldset>
+				 </div>
+					<div class="form-group" class="get-started" id="get-started" style="margin-bottom: 70px;">
+						<form method="post">
+							<button class="button" role="button" type="submit">Continue</button>
+						</form>
+					</div>
+				</div>
+				<div class="column-one-third">
+          {% include 'includes/parts/help.html' %}
+        </div>
+			</div>
+	</main><!-- / #page-container -->
+	{% endblock %}
+

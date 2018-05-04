@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main">
+	{% include 'includes/parts/phase-banner.html' %}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<br/>
+			<h1 class="heading-xlarge">When do you want to get your State Pension?</h1>
+
+
+		<form method="post">
+				<div class="form-group">
+				<div class="multiple-choice">
+					<input id="before" type="radio" name="pension-date" value="before">
+					<label for="before" class="heading-small">As soon as possible or a date up
+						 to 9 weeks after my </br> State Pension age</label>
+					<p>
+						This will not affect the amount of State Pension you receive
+						</p>
+				</div>
+
+					<div class="multiple-choice">
+						<input id="after" type="radio" name="pension-date" value="after">
+						<label for="after" class="heading-small">I want to delay my claim by
+							9 or more weeks after my </br> State Pension age</label>
+							<p>
+								You start to earn extra State Pension when you delay your claim
+								for more than 9 weeks
+							</p>
+						</div>
+
+
+				</div>
+				<button type="submit" class="button">Continue</button>
+			</form>
+	</div>
+</div>
+
+</main>
+{% endblock %}
+
+{% block pageScripts %}
+{% include 'includes/scripts/ninoFocus.html' %}
+{% include 'includes/scripts/dobFocus.html' %}
+{% include 'sprint9/scripts/clear_fields.html' %}
+{% endblock %}

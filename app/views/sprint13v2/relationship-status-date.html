@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main" class="group">
+	{% include 'includes/parts/phase-banner.html' %}
+
+    <div class="grid-row">
+	    <div class="column-two-thirds">
+				<form action="../relationship-status-date/{{type}}" method="post">
+			    <h1 class="heading-xlarge">{{ eventText }}</h1>
+
+					<div class="form-group form-date">
+						<fieldset>
+							<div class="form-group form-group-day">
+								<label for="dom-day">Day</label>
+								<input class="form-control" id="dom-day" maxlength="2" name="dom-day" value="{{dom-day}}" type="text" data-required="true"/>
+							</div>
+
+							<div class="form-group form-group-month">
+								<label for="dom-month">Month</label>
+								<input class="form-control" id="dom-month" maxlength="2"  name="dom-month" value="{{dom-month}}" type="text" data-required="true"/>
+							</div>
+
+							<div class="form-group form-group-year">
+								<label for="dom-year">Year</label>
+								<input class="form-control" id="dom-year" maxlength="4" name="dom-year" value="{{dom-year}}" type="text" data-required="true"/>
+							</div>
+						</fieldset>
+					</div>
+
+			    <div class="form-group">
+						 <input type="submit" class="button" name="submit" value="Continue">
+	        </div>
+				</form>
+			</div>
+			<div class="column-one-third">
+				{% include 'includes/parts/help.html' %}
+			</div>
+    </div>
+
+         </div>
+</main><!-- / #page-container -->
+
+{% endblock %}
+
+{% block pageScripts %}
+		{% include 'includes/scripts/dobFocus.html' %}
+{% endblock %}

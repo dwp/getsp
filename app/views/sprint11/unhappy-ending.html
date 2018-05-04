@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<nav class="back-nav" role="navigation">
+						<a id="backButton" class="link-back" href="secure">Back</a>
+					</nav>
+
+					<br />
+
+					<h1 class="heading-xlarge">Unable to identify you</h1>
+
+					<p class="compound">To get your State Pension we’ll need to check a few details.</p>
+
+					<h3 class="heading-small">Call us</h3>
+					<p class="compound">
+						Telephone: 0191 228 3232
+					</p>
+
+					<p class="compound">Monday to Friday, 8am to 6pm</p>  <p class="compound">You’ll need your invitation code and be able to confirm some personal details.</p>
+				</div>
+			</div>
+		</main><!-- / #page-container -->
+	{% endblock %}
+

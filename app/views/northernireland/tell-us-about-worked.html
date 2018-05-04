@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+  {% block pageTitle %}
+  	State Pension Activation
+  {% endblock %}
+
+  {% block content %}
+    <main id="content" role="main">
+      {% include 'includes/parts/phase-banner.html' %}
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h1 class="heading-xlarge">
+            <span class="heading-secondary">Country {{step.on}} of {{step.of}}</span>
+            <span style="text-transform:capitalize;">{{country}}</span>
+          </h1>
+
+          <form action="tell-us-about-worked" method="post">
+            <h2 class="heading-medium">When did you work here?</h1>
+
+            <fieldset>
+              <div class="form-group">
+                <div class="form-date">
+                  <h2 class="heading-small">From</h1>
+
+                  <div class="form-group form-group-month">
+                    <label for="working-start-month">Month</label>
+                    <input class="form-control" id="working-start-month" name="working-start-month" type="text" pattern="[0-9]*" min="0" max="12" maxlength="2">
+                  </div>
+
+                  <div class="form-group form-group-year">
+                    <label for="working-start-year">Year</label>
+                    <input class="form-control" id="working-start-year" name="working-start-year" type="text" pattern="[0-9]*" min="0" max="2016" maxlength="4">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-date">
+                  <h2 class="heading-small">To</h1>
+
+                  <div class="form-group form-group-month">
+                    <label for="working-stop-month">Month</label>
+                    <input class="form-control" id="working-stop-month" name="working-stop-month" type="text" pattern="[0-9]*" min="0" max="12" maxlength="2">
+                  </div>
+
+                  <div class="form-group form-group-year">
+                    <label for="working-stop-year">Year</label>
+                    <input class="form-control" id="working-stop-year" name="working-stop-year" type="text" pattern="[0-9]*" min="0" max="2016" maxlength="4">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="nino-equiv">What was the equivalent of your National Insurance number here?</label>
+                <input class="form-control" id="nino-equiv" type="text">
+              </div>
+            </fieldset>
+
+            <input type="submit" class="button" value="Continue">
+          </form>
+        </div>
+        <div class="column-one-third">
+          {% include 'includes/parts/helpni.html' %}
+        </div>
+      </div>
+    </main>
+  {% endblock %}
+
+  {% block pageScripts %}
+      {% include 'includes/scripts/country-dates-focus.html' %}
+  {% endblock %}

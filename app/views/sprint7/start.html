@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+			    <div class="column-two-thirds">
+				    <h1 class="heading-xlarge">Get your State Pension</h1>
+					<p>You’ll receive a letter before you reach <a href="https://www.gov.uk/state-pension/overview">State Pension age</a>. The letter will contain the invite code you’ll need to use this service.</p>
+					<p>Use this service when you're ready to get your state pension.</p>
+					<h3 class="heading-small">You will need your:</h3>
+					<ul class="list-bullet">
+						<li>your invite code (on your Get your State Pension letter)</li>
+						<li>your partner's details, including the date you were married or became civil partners</li>
+						<li>dates of any previous marriages or civil partnerships</li>
+						<li>your bank details or building society details</li>
+					</ul>
+
+					<h3 class="heading-small">If you don't want your State Pension straight away</h3>
+					<p>If you don't want to get your State Pension, then you don't have to do anything now.</p>
+					<p>You won't get any State Pension until you tell us you want it.</p>
+					<p>
+						You may get extra money if you delay taking your State Pension.<br />
+						<a href="https://www.gov.uk/new-state-pension/eligibility">
+							Learn about deferring.
+						</a>
+					</p>
+
+				    <div class="form-group" class="get-started" id="get-started" style="margin-bottom: 70px;">
+				    	<a href="secure" class="button button-get-started" role="button">Start now</a>
+				    </div>
+
+				    <section>
+						<h2 class="heading-medium compound" id="helpcontent">Other ways to get your State Pension</h2>
+						<!--<p class="compound">
+				        	<a id="helppage" rel="external" href="/claim-help" target="_blank">Read the guide</a>
+				        </p>-->
+						<h3 class="heading-small">By phone</h3>
+						<p class="compound">Telephone: 0800 731 7898<br/>
+						Textphone: 0800 731 7339</p>
+
+						<p class="compound">Monday to Friday, 8am to 6pm</p>
+					 	<p class="compound">How to get your State Pension if you are from <a href="http://www.nidirect.gov.uk/state-pension-online" rel="external">Northern Ireland</a>.</p>
+					</section>
+				</div>
+			</div>
+
+		</main><!-- / #page-container -->
+	{% endblock %}
+

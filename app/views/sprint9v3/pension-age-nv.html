@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">Your State Pension age</h1>
+					<p>According to the information you have given us, you will reach State Pension age on
+						 <span class="bold-small">8 October 2017</span>.</p>
+
+							<p>
+					<div class="form-group" class="get-started" id="get-started" style="margin-bottom: 70px;">
+						<a href="have-you-lived-abroad" class="button" role="button">Continue</a>
+					</div>
+							</p>
+				</div>
+
+				<div class="column-one-third">
+          {% include 'includes/parts/help.html' %}
+        </div>
+			</div>
+	</main><!-- / #page-container -->
+	{% endblock %}

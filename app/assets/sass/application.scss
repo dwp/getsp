@@ -1,0 +1,173 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+@import 'patterns/check-your-answers';
+@import 'patterns/task-list';
+
+@import 'block-labels';
+@import 'old-confirmation';
+@import 'homepagetop';
+@import 'examplebox';
+@import 'examplebox2';
+
+// Related itemss
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.label-no-hint {
+	padding-bottom: 10px!important;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.webchat {
+	position: fixed;
+    right: 200px;
+    bottom: 0;
+    background-color: #008338;
+    z-index: 999;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 3px 3px 0px 0px;
+	text-decoration: none;
+	color: #fff!important;
+}
+
+.noauth { padding-top: 10px!important; }
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+
+.form-group-pass {
+  float: left;
+  width: 35px;
+  margin-right: 5px;
+}
+
+.form-control-full {
+  width:100%;
+}
+.form-group-pass.last {
+  margin-left:2px;
+}
+
+.disabled { background: $grey-1; }
+
+input.disabled { width:30px; height:30px; margin-top:5px; }
+
+.compound-second { padding-bottom:15px; }
+
+.no-border { border: none;}
+
+span.span_nino {
+  border: 1px solid;
+  padding: 1px 3px 0;
+}
+
+span.span_nino2 {
+  color: #fff;
+  background-color: #0B0C0C;
+  padding: 1px 3px 0;
+}
+
+.input_nino_part {
+  max-width: 50px;
+}
+
+#ba-sort-code,
+#bs-sort-code {
+  max-width: 140px;
+}
+
+#bsb-code-1,
+#bsb-code-2 {
+  max-width: 160px;
+}
+
+
+// Twitter style type-ahead
+// #country-type-ahead {
+//   position: relative;
+// }
+
+.form-label {
+  span {
+    padding-left: 30px;
+  }
+}
+
+
+.warning-image {
+  position: relative;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+
+#safe, #help {
+  padding-top: 8px;
+}
+
+.legal_message {
+    margin: 30px 0 30px;
+    padding-left: 60px;
+    background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-important-2x-c948a58b675598f444f7f8fffd9ebf3d740905da332308c65b0dcb4af880d7ba.png);
+    background: url(https://assets.digital.cabinet-office.gov.uk/static/icon-important-aab708504574eda2dc4a4de0802be03dbbd70d57b422de93e55e265c9ae2fc43.png) no-repeat scroll 0 0.5em;
+    background-size: 34px 34px
+  }
+
+@import 'sprint7';
+@import 'sprint8';
+@import 'sprint10';
+
+.icon--top {
+  top: 20px !important;
+}
+
+.notice p, .notice details {
+  display: block;
+  padding-left: 65px;
+  margin-left: -15px;
+}
+
+.verify-block {
+  text-transform: uppercase;
+  font-size: 26px;
+  line-height: 26px;
+
+  .verify-logo {
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.bold-text {
+  font-weight: bold;
+}

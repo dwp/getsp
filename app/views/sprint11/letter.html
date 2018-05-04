@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main">
+	{% include 'includes/parts/phase-banner.html' %}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<br/>
+			<h1 class="heading-xlarge">How would you like to confirm your identity?</h1>
+
+		<form method="post">
+			<div>
+				<div class="multiple-choice">
+					<input id="invite-code" type="radio" name="letter-verify" value="invitation code">
+					<label for="invite-code" class="heading-small">Use a unique invitation code</label>
+
+						<p>
+							If you've been sent a letter inviting you to get your State Pension, your
+							unique invitation code will be included.
+						</p>
+
+				</div>
+
+				<div class="form-group">
+					<div class="multiple-choice">
+						<input id="verify" type="radio" name="letter-verify" value="verify">
+						<label for="verify" class="heading-small">Use GOV.UK Verify</label>
+
+							<p>
+								If you haven't been sent a letter inviting you to get your State Pension,
+								you can use GOV.UK Verify instead.
+							</p>
+
+					</div>
+				</div>
+				<button type="submit" class="button">Continue</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+</main>
+{% endblock %}
+
+{% block pageScripts %}
+{% include 'includes/scripts/ninoFocus.html' %}
+{% include 'includes/scripts/dobFocus.html' %}
+{% include 'sprint9/scripts/clear_fields.html' %}
+{% endblock %}

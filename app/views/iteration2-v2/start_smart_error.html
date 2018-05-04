@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main" class="group">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+		<form method="post" action="start_smart">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+			<!--
+				removed error message
+
+					<div class="error-summary error-message">
+       <h2 class="heading-small error-summary-heading">Check the form</h2>
+        <p>Fix the following:</p>
+        <ul class="error-summary-list">
+
+                <li>
+                    <a href="#ni_number">
+                        Your reference number is not valid
+                    </a>
+                </li>
+
+        </ol>
+    </div>
+-->
+
+
+    	<h1 class="heading-xlarge">Your reference number</h1>
+		<img src="/public/images/v11-diagram.png"/>
+        <div class="form-group error">
+	       	<label class="form-label strong" for="ni_number">
+            <p class="error-message">Your reference number is not valid</p>
+	        	<p class="form-hint">Can be found on your pension activation letter</p>
+	        </label>
+          <input type="text" class="form-control" id="ni_number" name="ni_number" />
+        </div>
+
+		<div class="form-group">
+            <button class="button" value="Continue">Continue</button> <br>
+            <a href="noauth" class="text">I don't have a reference number</a>
+        </div>
+        </div>
+	</div>
+</form>
+</main>
+
+{% endblock %}
+
+

@@ -1,0 +1,305 @@
+{% extends 'layout-index.html' %}
+
+{% block pageTitle %}
+Index
+{% endblock %}
+
+{% block content %}
+<div class="homepage-top">
+	<div class="homepage-top-content">
+		<h1 class="heading-xlarge">
+			Get your State Pension
+			<span>Prototypes</span>
+		</h1>
+	</div>
+</div>
+
+<main id="content" role="main" class="group">
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+ <h3 class="heading-medium">Valid Invite code: EDMO435HN3</h3>
+ 					<hr />
+			<!--
+			<tr>
+				<th>Demo Invite code:</th><td>QWX5YCHPNRJV</td>
+			</tr>
+
+			WOOD435HN3
+		-->
+
+<h3 class="heading-medium">Overview screen</h3>
+
+<div>
+			<details>
+				<summary><span class="summary">Prototypes</span></summary>
+				<div class="panel panel-border-narrow">
+					<div class="example2">
+						{%include "notes/overview1.html"%}
+					</div>
+
+				</div>
+			</details>
+</div>
+
+<h4 class="heading-medium">Date of payment</h4>
+
+<div>
+			<details>
+				<summary><span class="summary">Prototypes</span></summary>
+				<div class="panel panel-border-narrow">
+
+					<div class="example2">
+						{%include "notes/dopweek3.html"%}
+					</div>
+
+					<div class="example2">
+						{%include "notes/dopweek2.html"%}
+					</div>
+
+					<div class="example">
+						{%include "notes/dopweek1.html"%}
+					</div>
+
+				</div>
+			</details>
+</div>
+
+<h5 class="heading-medium">Verify</h5>
+
+<div>
+			<details>
+				<summary><span class="summary">Prototypes</span></summary>
+				<div class="panel panel-border-narrow">
+					<div class="example">
+						{%include "notes/verifyweek1.html"%}
+					</div>
+
+				</div>
+			</details>
+</div>
+
+<h5 class="heading-medium">Date of birth</h5>
+
+<div>
+			<details>
+				<summary><span class="summary">Prototypes</span></summary>
+				<div class="panel panel-border-narrow">
+
+					<div class="example">
+						{%include "notes/dobweek6.html"%}
+					</div>
+
+					<div class="example">
+						{%include "notes/dobweek4.html"%}
+					</div>
+
+					<div class="example">
+						{%include "notes/dobweek3.html"%}
+					</div>
+
+					<div class="example">
+						{%include "notes/dobweek2.html"%}
+					</div>
+
+					<div class="example">
+						{%include "notes/dobweek1.html"%}
+					</div>
+
+				</div>
+			</details>
+</div>
+
+					<hr />
+
+			<h2 class="heading-large">Invite Letters</h2>
+
+			<h3 class="heading-medium">MVP Version</h3>
+
+			<p>
+				<a href="download_fake_letter" target="_new" class="heading-small"><img src="/public/images/icon-file-download.png"
+					style="position: relative; float: left; margin-top: -8px; padding-right: 5px;">&nbsp;Download</a>
+				</p>
+
+				<h3 class="heading-medium">Notify</h3>
+
+				<h4 class="heading-small">Iteration 1</h4>
+				<p> example </p>
+				<p> <a href="download_fake_letter" target="_new" class="heading-small"><img src="/public/images/icon-file-download.png"
+					style="position: relative; float: left; margin-top: -8px; padding-right: 5px;">&nbsp;Download</a> </p>
+
+
+					<br />
+
+					<details>
+						<summary><span class="summary">Previous Iterations</span></summary>
+
+						<div class="panel panel-indent panel-border-narrow">
+							<h3 class="heading-medium">Version 1</h3>
+							<p>
+								This is a draft version of a letter we will be using for testing.
+								Users are sent this in advance of sessions and refer to this when they need to as they would in real life.
+								We are working with  Gov.uk and DWP to iterate this letter to work with the service.
+							</p>
+							<a href="download_fake_letter" target="_new" class="heading-small"><img src="/public/images/icon-file-download.png" style="position: relative; float: left; margin-top: -8px; padding-right: 5px;">&nbsp;Download</a>
+						</div>
+					</details>
+
+					<hr />
+
+					<!--<h3 class="heading-medium">Current Build (Private Beta)</h3>
+					<p>
+					This is a copy of the dev build as it stands on 13/04/2016.
+				</p>
+
+				<p><a href="/d1build/start" class="button">Start now</a></p>
+
+				<hr />-->
+
+				<h2 class="heading-large">MVP</h2>
+
+				{%include "notes/mvp-january.html"%}
+
+				<h3 class="heading-medium">MVP - Verify</h3>
+				<p>
+					MVP with Verify integration pages.
+				</p>
+				<p><a href="/sprint10/start" class="button">Start now</a></p>
+
+				<h3 class="heading-medium">MVP - Northern Ireland</h3>
+				<p>
+					Prototype with Northern Ireland contact information.
+				</p>
+				<p><a href="/northernireland/start" class="button">Start now</a></p>
+
+				<hr />
+
+				<details>
+					<summary><span class="summary">Previous Iterations</span></summary>
+
+					<div class="panel panel-indent panel-border-narrow">
+
+						<h3 class="heading-medium">Sprint 8 Mar / Apr 2016</h3>
+						<h4 class="heading-small">Version 1</h4>
+
+						<p>
+							This iteration removed the page which was added in sprint 6 about
+							which date the user wanted to get their state pension. There was
+							also some extended work on the drop down / type ahead for the country
+							selection. The surname was removed from the security page as
+							just the invite code was needed. Changed the title of the country
+							details page to just the country.
+						</p>
+
+						<p><a href="/sprint8/start" class="button">Start now v1</a></p>
+
+						<h4 class="heading-small">Version 2</h4>
+						<p>
+							Version 2 has the same changes as v1, but the date you were widowed
+							question has been moved into the partners details page. The reason for
+							this was to try and reduce the severity of asking such a sensitive
+							question.
+						</p>
+
+						<p><a href="/sprint8v2/start" class="button">Start now v2</a></p>
+
+
+						<h3 class="heading-medium">Sprint 7 Mar 2016</h3>
+						<p>
+							This iteration had the DOB and the NINO fields removed. It was also
+							to test the date the participant wanted their pension paid. Each
+							participant's SPA date could be set in the settings options.
+						</p>
+
+						<p>
+							<a href="/sprint7/settings">Settings</a>
+						</p>
+						<p><a href="/sprint7/start" class="button">Start now</a></p>
+
+						<hr />
+
+						<h3 class="heading-medium">Sprint 6 Feb / Mar 2016</h3>
+						<p>
+							This iteration was to implement the redesigned overseas journey.
+							We also added in a page to choose what date you wanted to claim from,
+							and updated the content on the declaration
+						</p>
+						<p><a href="/sprint6/start" class="button">Start now</a></p>
+
+						<hr />
+
+						<h3 class="heading-medium">Sprint 5 Feb 2016</h3>
+						<p>This iteration is to further research the overseas journey.</p>
+						<p><a href="/sprint5/start" class="button">Start now</a></p>
+
+						<h3 class="heading-medium">Sprint 4 Feb 2016</h3>
+						<p>This iteration is based on the findings from the Feb research session.</p>
+						<p><a href="/sprint4/start" class="button">Start now</a></p>
+
+						<hr />
+
+						<h3 class="heading-medium">Sprint 3 January 2016</h3>
+						<p>
+							This iteration is based on the findings from the January research session.
+							The settings have been removed and the winning elements have been hard coded in.
+						</p>
+						<p><a href="/sprint3/start" class="button">Start now</a></p>
+
+						<hr />
+
+						<h3 class="heading-medium">User Testing - 26th January 2016</h3>
+						<p>
+							This iteration focuses on providing two characters of the National
+							Insurance number for user identification. It also looks at making the
+							payment details more user friendly.
+						</p>
+						<p><a href="/january/start" class="button">Start now</a></p>
+
+						<a href="/january/settings">Settings</a>
+
+						<hr />
+
+						<h3 class="heading-medium">User Testing - 15th December 2015</h3>
+						<p>
+							This iteration encompasses the user research analysis insights which
+							we've done across the whole of alpha, bringing in a lot of work from
+							our BA colleagues around the questions which are required to be
+							answered in ordered to make a calculation.
+						</p>
+
+						<p><a href="/demo/start" class="button">Start now</a></p>
+
+						<p>
+							Each sprint we test and research  a future feature.  <br />
+							This sprint we will be looking at a page showing the state pension
+							amount. <a href="/demo/calculated-featured">Link</a>
+						</p>
+					</div>
+				</details>
+
+				<details>
+					<summary><span class="summary">Testing isolated features</span></summary>
+
+					<div class="panel panel-indent panel-border-narrow">
+						<h3 class="heading-medium">Overseas Journey Test</h3>
+						<p>
+							This is an iteration to explore the overseas journey. It is detached
+							from the rest of the prototype for the purpose of testing.
+						</p>
+
+						<p><a href="/ovsea-test/have-you-lived-abroad" class="button">Start now</a></p>
+					</div>
+				</details>
+				<!--
+
+				<hr />
+
+				<h3 class="heading-medium">Future Vision</h3>
+				<p><a href="/beta/start" class="button">Start now</a></p>
+
+			-->
+		</div>
+	</div>
+</main>
+{% endblock %}

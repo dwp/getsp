@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+State Pension Activation
+{% endblock %}
+
+{% block content %}
+<!-- #page-container -->
+<main id="content" role="main" class="group">
+	{% include 'includes/parts/phase-banner.html' %}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<h1 class="heading-xlarge">You need to send proof of your date of birth</h1>
+
+			<h3 class="heading-medium">You must send 1 of these original documents:</h3>
+
+			<ul class="list-bullet">
+				<li>Birth certificate</li>
+				<li>Certificate of registration of birth</li>
+				<li>Adoption order</li>
+				<li>Certificate of adoption issued by the Registrar General</li>
+				<li>Identity card</li>
+			</ul>
+
+
+		<h4 class="heading-medium">Include your National Insurance number and send it to:</h4>
+
+		<p>The Pension Service 4<br>
+			Mail Handling Site A<br>
+			Wolverhampton<br>
+			WV98 1AG</p>
+
+
+			<div class="notice">
+				<i class="icon icon-important">
+					<span class="visually-hidden">Warning</span>
+				</i>
+				<strong class="bold-small">
+					You can continue with your application, but it
+					can't be processed until you send proof of your
+					date of birth.
+				</strong>
+			</div>
+
+			<p>
+				<div class="form-group" class="continue" id="continue" style="margin-bottom: 70px;">
+					<a href="declaration" class="button button-continue" role="button">Continue</a>
+				</div>
+			</p>
+
+		</div>
+		<div class="column-one-third">
+			{% include 'includes/parts/help.html' %}
+		</div>
+	</div>
+
+</main><!-- / #page-container -->
+{% endblock %}

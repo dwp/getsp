@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">Feedback</h1>
+					<h3 class="heading-small">Help us improve Get your State Pension.</h3>
+					<p>Please do not incude any personal or financial information, e.g. your National Insurance number or bank details.</p>
+
+					<label class="form-label" for="what">What were you doing?</label>
+					<input class="form-control" id="what" type="text">
+					<br/>
+					<br/>
+					<label class="form-label" for="wrong">What went wrong?</label>
+					<input class="form-control" id="wrong" type="text">
+					<br/>
+					<br/>
+					<a href="#" class="button" value="Submit">Send feedback</a>
+					<br/>
+				</div>
+				<div class="column-one-third">
+
+        </div>
+			</div>
+	</main><!-- / #page-container -->
+	{% endblock %}
+

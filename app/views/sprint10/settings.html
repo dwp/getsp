@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">Sprint 7: Settings</h1>
+
+					<form action="settings" method="POST">
+            <h3 class="heading-small">Participant State Pension date</h3>
+            <div class="form-group form-date">
+  						<fieldset>
+  							<p class="text form-hint">This is the earliest date they can claim their state pension from</p>
+
+  							<div class="form-group form-group-day">
+  								<label for="spa-day">Day</label>
+  								<input class="form-control" id="spa-day" maxlength="2" name="spa-day" type="text" />
+  							</div>
+
+  							<div class="form-group form-group-month">
+  								<label for="spa-month">Month</label>
+  								<input class="form-control" id="spa-month" maxlength="2"  name="spa-month" type="text" />
+  							</div>
+
+  							<div class="form-group form-group-year">
+  								<label for="spa-year">Year</label>
+  								<input class="form-control" id="spa-year" maxlength="4" name="spa-year" type="text" />
+  							</div>
+  						</fieldset>
+  					</div>
+
+						<input type="submit" class="button" name="submit" value="Continue">
+					</form>
+				</div>
+			</div>
+		</main><!-- / #page-container -->
+	{% endblock %}
+

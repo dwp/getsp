@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main" class="group">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+	    	<h1 class="heading-xlarge">Your payment information</h1>
+			
+			
+			<table>
+				<thead>
+			      <tr>
+			        <th colspan="2">First Payment</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td>14th October 2015</td>
+			        <td>£572.80</td>
+			      </tr>
+			    </tbody>
+			 </table>
+			<br/>
+			<table>
+			    <thead>
+			      <tr>
+			        <th colspan="2">Future Payment Dates</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td>1st October 2015</td>
+			        <td>£286.40</td>
+			      </tr>
+			      <tr>
+			        <td>14th October 2015</td>
+			        <td>£572.80</td>
+			      </tr>
+			    </tbody>
+			  </table>
+			  
+			  <br/>
+			  
+			  <div class="form-group">
+        	<!-- <input type="submit" class="button" value="Submit"> -->
+            <a href="confirmation" class="button" value="Submit">Continue</a>
+        </div>
+        </div>
+        
+        
+    </div>      
+</main><!-- / #page-container -->
+
+{% endblock %}
+
+

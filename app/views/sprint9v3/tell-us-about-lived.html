@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+  {% block pageTitle %}
+  	State Pension Activation
+  {% endblock %}
+
+  {% block content %}
+  <main id="content" role="main">
+    {% include 'includes/parts/phase-banner.html' %}
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+          <h1 class="heading-xlarge">
+            <span class="heading-secondary">Country {{step.on}} of {{step.of}}</span>
+            <span style="text-transform:capitalize;">{{country}}</span>
+          </h1>
+
+          <h2 class="heading-medium">When did you live here?</h1>
+
+          <form action="tell-us-about-lived" method="post">
+            <fieldset>
+              <div class="form-group">
+                <div class="form-date">
+                  <h2 class="heading-small">From</h1>
+
+                  <div class="form-group form-group-month">
+                    <label for="living-start-month">Month</label>
+                    <input class="form-control" id="living-start-month" name="living-start-month" type="text" pattern="[0-9]*" min="0" max="12" maxlength="2">
+                  </div>
+
+                  <div class="form-group form-group-year">
+                    <label for="living-start-year">Year</label>
+                    <input class="form-control" id="living-start-year" name="living-start-year" type="text" pattern="[0-9]*" min="0" max="2016" maxlength="4">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <legend class="visuallyhidden">To<</legend>
+
+                <div class="form-date">
+                  <h2 class="heading-small">To</h1>
+
+                  <div class="form-group form-group-month">
+                    <label for="living-stop-month">Month</label>
+                    <input class="form-control" id="living-stop-month" name="living-stop-month" type="text" pattern="[0-9]*" min="0" max="12" maxlength="2">
+                  </div>
+
+                  <div class="form-group form-group-year">
+                    <label for="living-stop-year">Year</label>
+                    <input class="form-control" id="living-stop-year" name="living-stop-year" type="text" pattern="[0-9]*" min="0" max="2016" maxlength="4">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            {% if not countryType.resident %}
+
+
+            {% endif %}
+
+            <input type="submit" class="button" value="Continue">
+          </form>
+        </div>
+        <div class="column-one-third">
+          {% include 'includes/parts/help.html' %}
+        </div>
+      </div>
+    </main>
+  {% endblock %}
+
+  {% block pageScripts %}
+      {% include 'includes/scripts/country-dates-focus.html' %}
+  {% endblock %}

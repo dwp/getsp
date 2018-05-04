@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main" class="group">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+  	
+    <div class="grid-row">
+        <div class="column-two-thirds">
+    	<h1 class="heading-xlarge">Get your State Pension</h1>
+		<p class="text">To begin the process, please input the Unique Number found on your Pension Activation letter you received in the post.</p>
+		
+        <div class="form-group">
+	        <label class="form-label-bold" for="ni_number">
+	        	Your Unique Identification Number
+	        	<span class="form-hint">You should have received this in a letter, e.g. "XYZ 567 XYZ 678"</span>
+	        </label>
+	        <input type="text" class="form-control" id="ni_number">
+        </div>
+
+		<div class="form-group">
+            <a href="authenticate" class="button" value="Submit">Continue</a> <br>
+            <a href="noauth" class="text">I don't have a Unique ID Number</a>
+        </div>
+        </div>
+	</div>      
+</main>
+
+{% endblock %}
+
+

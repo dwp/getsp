@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">Your contact details</h1>
+
+					<form action="contact" method="POST">
+						<fieldset>
+							<div class="form-group">
+								<legend class="form-label form-group-compound" for="telephone">
+									<p class="text">These details will only be used if we need more information.</p>
+								</legend>
+							</div>
+
+							<div class="form-group">
+								<fieldset>
+									<label class="form-label-bold" for="phone_number1">
+										Preferred telephone number
+									</label>
+
+									<input type="text" class="form-control" id="phone_number1" name="phone_number1" data-required="true"/>
+								</fieldset>
+							</div>
+
+							<div class="form-group">
+								<fieldset>
+									<label class="form-label-bold" for="phone_number2">
+										Additional telephone number
+									</label>
+
+									<input type="text" class="form-control" id="phone_number2" name="phone_number2" />
+								</fieldset>
+							</div>
+
+							<div class="form-group">
+								<fieldset>
+									<label class="form-label-bold" for="email_address">
+										Email
+									</label>
+
+									<input type="text" class="form-control" id="email_address" name="email_address" />
+								</fieldset>
+							</div>
+						</fieldset>
+
+						<input type="submit" class="button" name="submit" value="Continue">
+					</form>
+				</div>
+			</div>
+		</main><!-- / #page-container -->
+	{% endblock %}
+

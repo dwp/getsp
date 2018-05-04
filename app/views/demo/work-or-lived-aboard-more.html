@@ -1,0 +1,270 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+		<form method="post" action='work-or-lived-aboard-more'>
+			<div class="grid-row">
+			    <div class="column-two-thirds">
+			<h1 class="heading-xlarge">About your time outside of the UK</h1>
+
+<div id="country-1">
+			<div class="form-group">
+		        <label class="form-label-bold label-no-hint" for="nationality">
+		      	Your nationality
+		    </label>
+		    <input class="form-control" id="nationality" type="text">
+		  </div>
+
+			<div class="form-group">
+		        <label class="form-label-bold label-no-hint" for="country">
+		      	Country you lived or worked in
+		    </label>
+		    <input class="form-control" id="country" type="text">
+		  </div>
+
+			<div class="form-group">
+
+				<fieldset>
+				        <div class="form-date">
+									<legend class="form-label-bold">	When  you started living or working there</legend>
+				          <p class="form-hint">For example, 31 3 1980</p>
+
+
+					          <div class="form-group form-group-day">
+					            <label for="dob-day">Day</label>
+					            <input class="form-control no-error " id="dob-day" name="dobDay" value="" type="text" maxlength="2">
+					          </div>
+
+					          <div class="form-group form-group-month">
+					            <label for="dob-month">Month</label>
+					            <input class="form-control no-error " id="dob-month" name="dobMonth" value="" type="text" maxlength="2">
+					          </div>
+
+					          <div class="form-group form-group-year">
+					            <label for="dob-year">Year</label>
+					            <input class="form-control no-error " id="dob-year" name="dobYear" value="" type="text" maxlength="4">
+					          </div>
+					        </div>
+
+				      </fieldset>
+				</div>
+
+			<div class="form-group">
+							<fieldset>
+							        <div class="form-date">
+												<legend class="form-label-bold">When you stopped living or working there</legend>
+							          <p class="form-hint">For example, 31 3 1980</p>
+
+
+								          <div class="form-group form-group-day">
+								            <label for="dob-day">Day</label>
+								            <input class="form-control no-error " id="dob-day" name="dobDay" value="" type="text" maxlength="2">
+								          </div>
+
+								          <div class="form-group form-group-month">
+								            <label for="dob-month">Month</label>
+								            <input class="form-control no-error " id="dob-month" name="dobMonth" value="" type="text" maxlength="2">
+								          </div>
+
+								          <div class="form-group form-group-year">
+								            <label for="dob-year">Year</label>
+								            <input class="form-control no-error " id="dob-year" name="dobYear" value="" type="text" maxlength="4">
+								          </div>
+								        </div>
+
+						</fieldset>
+				</div>
+
+				<div class="form-group form-group" id="otherName-form">
+				      <fieldset class="inline">
+				          <legend class="form-label-bold" for="otherName-form">
+				                Did you pay into that country's social security scheme?
+
+				          </legend>
+
+				                  <label class="block-label" for="social-yes" data-target="social-details">
+
+														<input id="social-yes" type="radio" name="social" value="yes" aria-controls="social-details" aria-expanded="false">
+				      							Yes
+				      						</label>
+
+				                  <label class="block-label" for="social-no">
+				      							<input id="social-no" type="radio" name="social" value="no" aria-expanded="false">
+				      							No
+				      						</label>
+
+				        </fieldset>
+
+								<div id="social-details" class="form-group js-hidden panel-indent">
+											<label class="form-label-bold label-no-hint" for="nationality">
+											Your social security reference number
+									</label>
+									<input class="form-control" id="nationality" type="text">
+								</div>
+
+								<!-- <div id="social-details" class="form-group js-hidden panel-indent">
+									<label class="form-label-bold label-no-hint" for="country">
+												Country  you lived or worked in?
+										</label>
+										<input class="form-control" id="country" type="text">
+								</div> -->
+
+				    </div>
+
+
+
+
+
+</div>
+
+
+
+<fieldset class="inline form-group">
+		<legend class="form-label-bold" for="livedOrWorked2-form">
+				Have you lived or worked in another country?
+		</legend>
+
+						<label class="block-label" for="livedOrWorked2-yes" data-target="livedOrWorked2-details">
+							<input id="livedOrWorked2-yes" type="radio" name="livedOrWorked2" value="yes" aria-controls="livedOrWorked2" aria-expanded="false">
+							Yes
+						</label>
+
+						<label class="block-label" for="livedOrWorked2-no">
+							<input id="livedOrWorked2-no" type="radio" name="livedOrWorked2" value="no" aria-expanded="false">
+							No
+						</label>
+		</fieldset>
+
+			<div class="js-hidden" id="livedOrWorked2-details">
+
+				<div class="form-group">
+							<label class="form-label-bold label-no-hint" for="country">
+							Country you lived or worked in
+					</label>
+					<input class="form-control" id="country" type="text">
+				</div>
+
+				<div class="form-group">
+
+					<fieldset>
+									<div class="form-date">
+										<legend class="form-label-bold">When you started living or working there</legend>
+										<p class="form-hint">For example, 31 3 1980</p>
+
+
+											<div class="form-group form-group-day">
+												<label for="dob-day">Day</label>
+												<input class="form-control no-error " id="dob-day" name="dobDay" value="" type="text" maxlength="2">
+											</div>
+
+											<div class="form-group form-group-month">
+												<label for="dob-month">Month</label>
+												<input class="form-control no-error " id="dob-month" name="dobMonth" value="" type="text" maxlength="2">
+											</div>
+
+											<div class="form-group form-group-year">
+												<label for="dob-year">Year</label>
+												<input class="form-control no-error " id="dob-year" name="dobYear" value="" type="text" maxlength="4">
+											</div>
+										</div>
+
+								</fieldset>
+					</div>
+
+				<div class="form-group">
+								<fieldset>
+												<div class="form-date">
+													<legend class="form-label-bold">When you stopped living or working there</legend>
+													<p class="form-hint">For example, 31 3 1980</p>
+
+
+														<div class="form-group form-group-day">
+															<label for="dob-day">Day</label>
+															<input class="form-control no-error " id="dob-day" name="dobDay" value="" type="text" maxlength="2">
+														</div>
+
+														<div class="form-group form-group-month">
+															<label for="dob-month">Month</label>
+															<input class="form-control no-error " id="dob-month" name="dobMonth" value="" type="text" maxlength="2">
+														</div>
+
+														<div class="form-group form-group-year">
+															<label for="dob-year">Year</label>
+															<input class="form-control no-error " id="dob-year" name="dobYear" value="" type="text" maxlength="4">
+														</div>
+													</div>
+
+							</fieldset>
+					</div>
+
+					<div class="form-group form-group" id="otherName-form">
+								<fieldset class="inline">
+										<legend class="form-label-bold" for="otherName2-form">
+													Did you pay into that country's social security scheme?
+
+										</legend>
+
+														<label class="block-label" for="social2-yes" data-target="social2-details-more">
+														<!-- <label class="block-label" for="social2-yes"> -->
+															<input id="social2-yes" type="radio" name="social2" value="yes" aria-controls="social-details" aria-expanded="false">
+															Yes
+														</label>
+
+														<label class="block-label" for="social2-no">
+															<input id="social2-no" type="radio" name="social2" value="no" aria-expanded="false">
+															No
+														</label>
+
+									</fieldset>
+
+									<div id="social2-details-more" class="form-group js-hidden panel-indent">
+												<label class="form-label-bold label-no-hint" for="nationality">
+												Your social security reference number
+										</label>
+										<input class="form-control" id="nationality" type="text">
+									</div>
+
+									<!-- <div id="social2-details-more" class="form-group js-hidden panel-indent">
+										<label class="form-label-bold label-no-hint" for="country">
+													Country  you lived or worked in?
+											</label>
+											<input class="form-control" id="country" type="text">
+									</div> -->
+
+							</div>
+
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+			<div class="form-group">
+		        <input type="submit" name="submit" class="button" value="Continue">
+		  </div>
+		</div>
+	</div>
+    </form>
+ </main><!-- / #page-container -->
+
+{% endblock %}
+
+

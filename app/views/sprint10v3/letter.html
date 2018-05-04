@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main">
+	{% include 'includes/parts/phase-banner.html' %}
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+
+			<br/>
+			<br/>
+			<h1 class="heading-xlarge">Prove your identity</h1>
+
+			<p>
+				<h3 class="heading-medium">Have you received a Get your State Pension </br>
+					invitation letter?</h3>
+				It’s OK if you don’t have a letter, you can still use this service.
+			</p>
+
+		</br>
+
+		<form method="post">
+
+			<div class="form-group">
+				<div class="multiple-choice">
+					<input id="invite-code" type="radio" name="letter-verify" value="invitation code">
+					<label for="invite-code" class="heading-small">I have an invitation letter</label>
+
+					<p>
+						Your unique invitation code will be included in this letter.
+					</p>
+				</div>
+
+				<div class="multiple-choice">
+					<input id="verify" type="radio" name="letter-verify" value="verify">
+					<label for="verify" class="heading-small">I haven’t got an invitation letter</label>
+
+					<p>
+						You can use the government’s identity verification service
+					</br>GOV.UK Verify instead.
+					</p>
+
+				</div>
+			</div>
+
+			<button type="submit" class="button">Continue</button>
+		</form>
+
+	</div>
+</div>
+
+</main>
+{% endblock %}
+
+{% block pageScripts %}
+{% include 'includes/scripts/ninoFocus.html' %}
+{% include 'includes/scripts/dobFocus.html' %}
+{% include 'sprint9/scripts/clear_fields.html' %}
+{% endblock %}

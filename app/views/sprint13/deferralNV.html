@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+State Pension Activation
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include 'includes/parts/phase-banner.html' %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if errors %}
+      <div class="error-summary error-message no-margin-top" data-banktype="{{errors.bank_type}}">
+        <h2 class="heading-medium error-summary-heading">{{errors.title}}</h2>
+        <p>{{errors.text}}</p>
+      </div>
+      {% endif %}
+
+      <h1 class="heading-xlarge">When do you want your </br>State Pension?</h1>
+
+      <form method="post">
+        <input id="spa-date" type="hidden" value="{{date}}">
+
+        <fieldset>
+          <p>According to the information you have given us, the earliest date</br> you can get
+            your State Pension is <span class="bold-small">12 April 2018</span>.</br>
+
+            <h2 class="heading-small">What date do you want to get your State Pension?</h2>
+            <div class="" id="set-date-hidden">
+              <p class="text form-hint">You can only make a claim up to 4 months in advance.</p>
+
+            <fieldset>
+              <p id="error-message" class="error-message" style="display: none;">
+                The date you have entered is more than four months from now. To claim on this date please come back on <span></span>.
+              </p>
+
+              <p id="error-message2" class="error-message" style="display: none;">
+                The date you have entered is before your State Pension age. The earliest you can claim is {{nice_date.day}} {{nice_date.month}} {{nice_date.year}}.
+              </p>
+
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label for="set-day">Day</label>
+                  <input class="form-control" id="set-day" name="deferral-day" type="text" maxlength="2" pattern="[0-9]*" min="0" max="31">
+                </div>
+
+                <div class="form-group form-group-month">
+                  <label for="set-month">Month</label>
+                  <input class="form-control" id="set-month" name="deferral-month" type="text" maxlength="2" pattern="[0-9]*" min="0" max="12">
+                </div>
+
+                <div class="form-group form-group-year">
+                  <label for="set-year">Year</label>
+                  <input class="form-control" id="set-year" name="deferral-year" type="text" maxlength="4" pattern="[0-9]*" min="0" max="2016">
+                </div>
+              </div>
+            </fieldset>
+          </fieldset>
+
+</br>
+
+        <div>
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+        </form>
+      </div>
+
+      <div class="column-one-third">
+        {% include 'includes/parts/help.html' %}
+      </div>
+    </div>
+  </main>
+  {% endblock %}

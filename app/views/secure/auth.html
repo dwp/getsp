@@ -1,0 +1,147 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+	<form method="post" action="secure">
+    	<div class="grid-row">
+        	<div class="column-two-thirds">
+				{{#error}}
+					<div class="error-summary error-message no-margin-top">
+						<h2 class="heading-small error-summary-heading">Check the form</h2>
+						<p>Fix the following:</p>
+						<ol class="error-summary-list">
+							<li>
+								<a href="#ni_number">One or more of your details are not correct</a>
+							</li>
+						</ol>
+					</div>
+				{{/error}}
+
+
+	    	<h1 class="heading-xlarge">Provide your details</h1>
+			<div class="form-group">
+				<label class="form-label-bold" for="ni_number">
+					Invite code
+					<p class="form-hint">Can be found on your Get your State Pension letter</p>
+				</label>
+				<input type="text" class="form-control" id="reference" name="reference" /><br/>
+				<!--<div class="noauth"><a href="noauth">I don't have a reference number</a></div>-->
+			</div>
+
+			<div class="form-group">
+				<legend class="form-label-bold" for="ni_number" id="ni_number">
+    				National Insurance number ({{text.field0}} and {{text.field1}} numbers)
+					<span class="form-hint">It'll be on your last payslip. For example, JH 21 90 20 A.</span>
+				</legend>
+
+            <div class="form-group form-group-compound  form-group-pass">
+      			     <input class="form-control  form-control-full disabled" name="value1" id="value1" type="text" disabled>
+            </div>
+            <div class="form-group form-group-compound form-group-pass">
+      			     <input class="form-control form-control-full disabled" name="value2" id="value2" type="text" disabled>
+            </div>
+            <div class="form-group form-group-compound form-group-pass">
+      			     <input class="form-control form-control-full {{^fields.value1}} disabled {{/fields.value1}}" name="value3" id="value3" maxlength=1 type="text" {{^fields.value1}} disabled {{/fields.value1}}>
+            </div>
+            <div class="form-group form-group-compound form-group-pass">
+      			     <input class="form-control form-control-full {{^fields.value2}} disabled {{/fields.value2}}" name="value4" id="value4"	 maxlength=1 type="text" {{^fields.value2}} disabled {{/fields.value2}}>
+            </div>
+            <div class="form-group form-group-compound form-group-pass">
+      			     <input class="form-control form-control-full {{^fields.value3}} disabled {{/fields.value3}} " name="value5" id="value5"  maxlength=1 type="text" {{^fields.value3}} disabled {{/fields.value3}}>
+            </div>
+            <div class="form-group form-group-compound form-group-pass">
+      			     <input class="form-control form-control-full {{^fields.value4}} disabled {{/fields.value4}}" name="value6" id="value6"  maxlength=1 type="text" {{^fields.value4}} disabled {{/fields.value4}}>
+            </div>
+            <div class="form-group form-group-compound form-group-pass">
+      			     <input class="form-control form-control-full {{^fields.value5}} disabled {{/fields.value5}}" name="value7" id="value7"  maxlength=1 type="text" {{^fields.value5}} disabled {{/fields.value5}}>
+            </div>
+						<div class="form-group form-group-compound form-group-pass">
+      			     <input class="form-control form-control-full {{^fields.value6}} disabled {{/fields.value6}}" name="value8" id="value8"  maxlength=1 type="text" {{^fields.value6}} disabled {{/fields.value6}}>
+            </div>
+            <div class="form-group form-group-compound form-group-pass last">
+      			     <input class="form-control form-control-full disabled" name="value9" id="value9" type="text" disabled>
+            </div>
+
+
+        </div>
+
+				<!--
+<div class="form-group">
+				<legend class="form-label-bold" for="ni_number" id="ni_number">
+    				National Insurance number
+					<span class="form-hint">It'll be on your last payslip. For example, JH 21 90 20 A.</span>
+				</legend>
+
+
+            <div class="form-group form-group-compound form-group-pass">
+  <label>5th Number</label>
+
+      			     <input class="form-control form-control-half " name="value7" id="value7" maxlength="1" type="text">
+            </div>
+						<div class="form-group form-group-compound form-group-pass">
+  <label>6th Number</label>
+
+      			     <input class="form-control form-control-half " name="value8" id="value8" maxlength="1" type="text">
+            </div>
+        </div>
+
+				-->
+
+
+	        <div class="form-group">
+	        <label class="form-label-bold label-no-hint" for="surname">
+				Surname
+			</label>
+			<input class="form-control" name="surname" id="surname" type="text">
+		</div>
+
+        <div class="form-group">
+            <fieldset>
+                <legend class="form-label-bold">Date of birth</legend>
+                <div class="form-date">
+                    <p class="form-hint">For example, 31 12 1980</p>
+                    <div class="form-group form-group-day">
+                        <label for="dob-day">Day</label>
+                        <input class="form-control" id="dob-day" maxlength="2" name="dob-day" value="{{dob-day}}" type="text" />
+                    </div>
+                    <div class="form-group form-group-month">
+                        <label for="dob-month">Month</label>
+                        <input class="form-control" id="dob-month" maxlength="2"  name="dob-month" value="{{dob-month}}" type="text" />
+                    </div>
+                    <div class="form-group form-group-year">
+                        <label for="dob-year">Year</label>
+                        <input class="form-control" id="dob-year" maxlength="4" name="dob-year" value="{{dob-year}}" type="text" />
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+
+			<div class="form-group">
+	            <button class="button" value="Continue">Continue</button> <br>
+	        </div>
+      </div>
+
+  <!--	{% include 'includes/parts/help.html' %} -->
+
+
+	</div>
+</form>
+
+</main>
+
+{% endblock %}
+
+

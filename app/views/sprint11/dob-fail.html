@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+	{% block pageTitle %}
+		State Pension Activation
+	{% endblock %}
+
+	{% block content %}
+		<!-- #page-container -->
+		<main id="content" role="main" class="group">
+			{% include 'includes/parts/phase-banner.html' %}
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h1 class="heading-xlarge">Your date of birth hasn't been recognised</h1>
+
+					<p class="lede">
+						You need to send something that shows your date of birth.
+					</p>
+
+						<p>It must be one of these original documents:</p>
+
+						<ul class="list-bullet">
+							<li>a birth certificate</li>
+							<li>a certificate of registration of birth</li>
+							<li>an adoption order</li>
+							<li>a certificate of adoption issued by the Registrar General</li>
+							<li>an identity card</li>
+						</ul>
+
+					<p>Send it to:</p>
+
+					<p>Newcastle Pension Centre<br/>
+						 The Pension Service 13<br/>
+						 Post Handling Site B<br/>
+						 Wolverhampton<br/>
+						 WV99 1AQ
+					</p>
+
+					<p>International Pension Centre<br/>
+						 The Pension Service 11<br/>
+						 Mail Handling Site A<br/>
+						 Wolverhampton<br/>
+						 WV98 1LW
+				  </p>
+
+					<p>Your document will be returned to you as soon as possible.</p>
+
+				</div>
+				<div class="column-one-third">
+          {% include 'includes/parts/help.html' %}
+        </div>
+			</div>
+	</main><!-- / #page-container -->
+	{% endblock %}
+

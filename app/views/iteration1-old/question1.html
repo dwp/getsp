@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+	State Pension Activation
+{% endblock %}
+
+{% block content %}
+
+<!-- #page-container -->
+<main id="content" role="main" class="group">
+	<div class="phase-banner">
+    	<p>
+      		<strong class="phase-tag">ALPHA</strong>
+      		<span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+    	</p>
+  	</div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+    	<h1 class="heading-xlarge">What is your marital status?</h1>
+
+        <form>
+		<div class="form-group">
+	        <fieldset>
+			    <div class="form-group form-group-compound">
+			      <label class="block-label" for="radio-1">
+				    <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+				    Never been married
+				  </label>
+				  <label class="block-label" for="radio-2">
+				    <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+				    Married
+				  </label>
+				  <label class="block-label" for="radio-3">
+				    <input id="radio-3" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+				    Widowed
+				  </label>
+				  <label class="block-label" for="radio-4">
+				    <input id="radio-4" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+				    Divorced
+				  </label>
+			    </div>
+			</fieldset>        
+		</div>
+        
+        <div class="form-group">
+        	<!-- <input type="submit" class="button" value="Submit"> -->
+            <a href="question2" class="button" value="Submit">Continue</a>
+        </div>
+
+            <!-- </form> -->
+
+        </div>
+
+    </div>  
+        </form>
+
+
+    </main><!-- / #page-container -->
+
+{% endblock %}
+
+
