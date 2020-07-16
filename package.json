@@ -15,7 +15,7 @@
     "basic-auth": "^1.0.3",
     "basic-auth-connect": "^1.0.0",
     "body-parser": "^1.14.1",
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.26.9",
     "cookie-parser": "^1.4.3",
     "cross-spawn": "^5.0.0",
     "date-fns": "^1.29.0",
@@ -41,7 +41,7 @@
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",
     "serve-favicon": "2.3.0",
-    "standard": "^8.6.0",
+    "standard": "^11.0.0",
     "supertest": "^2.0.0",
     "sync-request": "^3.0.1"
   }
